@@ -7,7 +7,7 @@ public class PlayerPickUpDrop : MonoBehaviour
 
 
     [SerializeField] private Transform playerCameraTransform;
-    [SerializeField] private Transform objectGrabPointTransform;
+    [SerializeField] private GameObject objectGrabPointTransform;
     [SerializeField] private GameObject E;
     [SerializeField] private LayerMask pickUpLayerMask;
     [SerializeField] private float pickUpDistance = 7f;

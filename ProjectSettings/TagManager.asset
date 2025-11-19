@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Leyka
   - Door
+  - Boksit
+  - Ferrum
+  - Kuprit
+  - Halkopirit
+  - Marganec
   layers:
   - Default
   - TransparentFX

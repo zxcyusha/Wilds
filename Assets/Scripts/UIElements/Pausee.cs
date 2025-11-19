@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && StartCatScene.CanSettings)
         {
             PausePanel.SetActive(true);
             Cursor.visible = true;

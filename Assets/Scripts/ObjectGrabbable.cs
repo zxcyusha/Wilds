@@ -12,11 +12,12 @@ public class ObjectGrabbable : MonoBehaviour
         objectRigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Grab(Transform objectGrabPointTransform)
+    public void Grab(GameObject objectGrabPointTransform)
     {
-        this.objectGrabPointTransform = objectGrabPointTransform;
+        this.objectGrabPointTransform = objectGrabPointTransform.transform;
         objectRigidbody.useGravity = false;
         objectRigidbody.isKinematic = true;
+        Invoke("aboba", 0.00001f);
     }
 
     public void Drop()
@@ -24,6 +25,7 @@ public class ObjectGrabbable : MonoBehaviour
         this.objectGrabPointTransform = null;
         objectRigidbody.useGravity = true;
         objectRigidbody.isKinematic = false;
+        this.transform.SetParent(null);
     }
     private void FixedUpdate()
     {
@@ -33,6 +35,12 @@ public class ObjectGrabbable : MonoBehaviour
             Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);
             objectRigidbody.MovePosition(newPosition);
         }
+    }
+
+    private void aboba() { 
+        this.transform.SetParent(objectGrabPointTransform.transform);
+        transform.rotation = Quaternion.Euler(0, 265, 0);
+        transform.localRotation = Quaternion.Euler(0, 265, 0);
     }
 
 
