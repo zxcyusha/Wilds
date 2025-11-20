@@ -8,11 +8,12 @@ public class ItemPicker : MonoBehaviour
 {
     public Transform playerCamera;
     public float pickRange = 3f;
-    public GameObject E;
     public float speed = 0.1f;
     public AudioSource OpenDoor;
     private bool isAnimating;
     [SerializeField] private float duration = 0.5f;
+    [SerializeField] private LayerMask pickUpLayerMask;
+    [SerializeField] private GameObject F;
     private Quaternion closedRot;
     private Quaternion openRot;
     public bool isOpen;
@@ -25,7 +26,13 @@ public class ItemPicker : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 4f, pickUpLayerMask))
+        {
+            if ((hit.collider.CompareTag("Podnos") && (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")) || hit.collider.CompareTag("Door")) F.SetActive(true);
+            else F.SetActive(false);
+        }
+        else F.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.F))
         {
             if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit Hit, pickRange))
             {

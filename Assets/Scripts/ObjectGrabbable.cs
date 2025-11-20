@@ -39,8 +39,15 @@ public class ObjectGrabbable : MonoBehaviour
 
     private void aboba() { 
         this.transform.SetParent(objectGrabPointTransform.transform);
-        transform.rotation = Quaternion.Euler(0, 265, 0);
-        transform.localRotation = Quaternion.Euler(0, 265, 0);
+        if (PlayerPickUpDrop.WhatHolding != "лист") {
+            transform.rotation = Quaternion.Euler(0, 265, 0);
+            transform.localRotation = Quaternion.Euler(0, 265, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -90);
+            transform.localRotation = Quaternion.Euler(0, 0, -90);
+        }
     }
 
 
