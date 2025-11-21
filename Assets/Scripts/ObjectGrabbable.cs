@@ -10,6 +10,7 @@ public class ObjectGrabbable : MonoBehaviour
     private void Awake()
     {
         objectRigidbody = GetComponent<Rigidbody>();
+
     }
 
     public void Grab(GameObject objectGrabPointTransform)
@@ -18,6 +19,8 @@ public class ObjectGrabbable : MonoBehaviour
         objectRigidbody.useGravity = false;
         objectRigidbody.isKinematic = true;
         Invoke("aboba", 0.00001f);
+
+        this.transform.SetParent(objectGrabPointTransform.transform);
     }
 
     public void Drop()
@@ -38,15 +41,20 @@ public class ObjectGrabbable : MonoBehaviour
     }
 
     private void aboba() { 
-        this.transform.SetParent(objectGrabPointTransform.transform);
-        if (PlayerPickUpDrop.WhatHolding != "лист") {
-            transform.rotation = Quaternion.Euler(0, 265, 0);
-            transform.localRotation = Quaternion.Euler(0, 265, 0);
+        
+        if (PlayerPickUpDrop.WhatHolding == "лист") {
+            transform.rotation = Quaternion.Euler(0, 0, -90);
+            transform.localRotation = Quaternion.Euler(0, 0, -90);
+        }
+        else if (PlayerPickUpDrop.WhatHolding == "плотностьь")
+        {
+            transform.rotation = Quaternion.Euler(-180, 0, 0);
+            transform.localRotation = Quaternion.Euler(-180, 0, 0);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 0, -90);
-            transform.localRotation = Quaternion.Euler(0, 0, -90);
+            transform.rotation = Quaternion.Euler(0, 265, 0);
+            transform.localRotation = Quaternion.Euler(0, 265, 0);
         }
     }
 

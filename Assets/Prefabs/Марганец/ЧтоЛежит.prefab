@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4133242970123440387}
   - component: {fileID: 7029065504107262528}
   - component: {fileID: 2617032358363770066}
+  - component: {fileID: 2664250843225520186}
   m_Layer: 0
   m_Name: "\u0427\u0442\u043E\u041B\u0435\u0436\u0438\u0442"
   m_TagString: Untagged
@@ -286,7 +287,7 @@ Transform:
   - {fileID: 1199489263377104819}
   - {fileID: 1862865458710754151}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7029065504107262528
 MeshFilter:
@@ -338,6 +339,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2664250843225520186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167849138411310576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07314953, y: 0.054484017, z: 0.043426916}
+  m_Center: {x: 0.0107660135, y: -0.006055693, z: 0.01222199}
 --- !u!1 &3484905543599868151
 GameObject:
   m_ObjectHideFlags: 0

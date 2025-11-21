@@ -13,6 +13,12 @@ TagManager:
   - Marganec
   - Podnos
   - Listok
+  - Tverdost
+  - Sostav
+  - Plotnost
+  - Vlashnost
+  - kamen
+  - Magnit
   layers:
   - Default
   - TransparentFX

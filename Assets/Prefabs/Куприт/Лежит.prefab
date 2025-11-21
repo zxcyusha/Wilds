@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2499132675779801665}
   - component: {fileID: 938349955798169364}
   - component: {fileID: 3455322516437372237}
+  - component: {fileID: 5860842945695889153}
   m_Layer: 0
   m_Name: "\u041B\u0435\u0436\u0438\u0442"
   m_TagString: Leyka
@@ -36,7 +37,7 @@ Transform:
   - {fileID: 4731419376713571076}
   - {fileID: 4752033350290198225}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &938349955798169364
 MeshFilter:
@@ -88,6 +89,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5860842945695889153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461267283177907504}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07263818, y: 0.084618, z: 0.05946961}
+  m_Center: {x: 0.008654345, y: 0.007446314, z: -0.001263827}
 --- !u!1 &3484522024470598592
 GameObject:
   m_ObjectHideFlags: 0

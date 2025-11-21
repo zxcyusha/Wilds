@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2630456283864329939}
   - component: {fileID: -3111499082700436897}
   - component: {fileID: -1567807320330157202}
-  - component: {fileID: 4115538458273823393}
+  - component: {fileID: 979313396975437040}
   m_Layer: 0
   m_Name: "\u041C\u0430\u0440\u0433\u0430\u043D\u0435\u0446\u0446"
   m_TagString: Leyka
@@ -125,8 +125,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4115538458273823393
-BoxCollider:
+--- !u!136 &979313396975437040
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,6 +143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.013617083, y: 0.0140686445, z: 0.014850647}
-  m_Center: {x: -0.00027426207, y: -0.00092613045, z: 0.0014963547}
+  serializedVersion: 2
+  m_Radius: 0.009257047
+  m_Height: 0.010657918
+  m_Direction: 1
+  m_Center: {x: 0.00013165915, y: -0.00009021993, z: 0.0013255362}

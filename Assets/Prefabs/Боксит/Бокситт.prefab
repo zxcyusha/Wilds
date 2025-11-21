@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1155984253460514868}
   - component: {fileID: 8582156556638092983}
   - component: {fileID: -7650014956325271747}
-  - component: {fileID: -6768515977121215810}
-  - component: {fileID: 7552992482046491309}
+  - component: {fileID: 4473367922216188217}
+  - component: {fileID: 8210825931624776462}
   m_Layer: 0
   m_Name: "\u0411\u043E\u043A\u0441\u0438\u0442\u0442"
   m_TagString: Leyka
@@ -98,7 +98,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17de6d5e75a224aae1351a4d4a6cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &-6768515977121215810
+--- !u!136 &4473367922216188217
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5770915513034984685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008319246
+  m_Height: 0.012665754
+  m_Direction: 1
+  m_Center: {x: 0.00074155757, y: 0.0014059292, z: 0.0012311889}
+--- !u!54 &8210825931624776462
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,24 +148,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7552992482046491309
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5770915513034984685}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.014037656, y: 0.015222714, z: 0.01545878}
-  m_Center: {x: -0.0003779292, y: -0.00017059091, z: 0.0024695084}

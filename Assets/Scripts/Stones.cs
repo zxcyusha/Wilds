@@ -80,34 +80,45 @@ public class Stones : MonoBehaviour
                     if (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)")
                     {
                         BoksitOnTable.SetActive(true);
-                        boksit.SetActive(false);
+                        Destroy(boksit);
                         PlayerPickUpDrop.WhatHolding = "0";
+                        PlayerPickUpDrop.objectGrabbable = null;
+                        poloshili = true;
+
                     }
                     if (PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)")
                     {
                         FurrumOnTable.SetActive(true);
-                        ferrum.SetActive(false);
+                        Destroy(ferrum);
                         PlayerPickUpDrop.WhatHolding = "0";
+                        PlayerPickUpDrop.objectGrabbable = null;
+                        poloshili = true;
                     }
                     if (PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)")
                     {
                         KupritOnTable.SetActive(true);
-                        kuprit.SetActive(false);
+                        Destroy(kuprit);
                         PlayerPickUpDrop.WhatHolding = "0";
+                        PlayerPickUpDrop.objectGrabbable = null;
+                        poloshili = true;
                     }
                     if (PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)")
                     {
                         MarganecOnTable.SetActive(true);
-                        marganec.SetActive(false);
+                        Destroy(marganec);
                         PlayerPickUpDrop.WhatHolding = "0";
+                        PlayerPickUpDrop.objectGrabbable = null;
+                        poloshili = true;
                     }
                     if (PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")
                     {
                         HalkopiritOnTable.SetActive(true);
-                        halkopirit.SetActive(false);
+                        Destroy(halkopirit);
                         PlayerPickUpDrop.WhatHolding = "0";
+                        PlayerPickUpDrop.objectGrabbable = null;
+                        poloshili = true;
                     }
-                    poloshili = true;
+                    
                 }
             }
         }

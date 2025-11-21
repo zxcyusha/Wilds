@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 490537425152667313}
   - component: {fileID: 860329519131516362}
   - component: {fileID: 6370655818784598691}
-  - component: {fileID: 4721754329280055026}
   - component: {fileID: 8265116548259937177}
   - component: {fileID: 5856988365474544696}
+  - component: {fileID: 8764104781767720421}
   m_Layer: 0
   m_Name: "\u0413\u0435\u043C\u0430\u0442\u0438\u0442\u0442"
   m_TagString: Leyka
@@ -86,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4721754329280055026
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025065213754067513}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.011658251, y: 0.0130115645, z: 0.01655497}
-  m_Center: {x: 0.00008018183, y: 0.00017687542, z: 0.0014876992}
 --- !u!114 &8265116548259937177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +125,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &8764104781767720421
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025065213754067513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0066416743
+  m_Height: 0.010995562
+  m_Direction: 1
+  m_Center: {x: 0.000068847316, y: 0.00091787346, z: 0.001213872}

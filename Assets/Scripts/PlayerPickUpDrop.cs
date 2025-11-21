@@ -11,6 +11,11 @@ public class PlayerPickUpDrop : MonoBehaviour
     [SerializeField] private GameObject E;
     [SerializeField] private LayerMask pickUpLayerMask;
     [SerializeField] private float pickUpDistance = 7f;
+    [SerializeField] private GameObject text1;
+    [SerializeField] private GameObject text2;
+    [SerializeField] private GameObject text3;
+    [SerializeField] private GameObject text4;
+    [SerializeField] private GameObject text5;
 
     public static ObjectGrabbable objectGrabbable;
     public static string WhatHolding = "0";
@@ -21,14 +26,35 @@ public class PlayerPickUpDrop : MonoBehaviour
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))
         {
             Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward, Color.red);
-            if ((Hit.collider.CompareTag("Leyka") && objectGrabbable == null) || Hit.collider.CompareTag("Boksit") || Hit.collider.CompareTag("Ferrum") || Hit.collider.CompareTag("Kuprit") || Hit.collider.CompareTag("Halkopirit") || Hit.collider.CompareTag("Marganec"))
+            if ((Hit.collider.CompareTag("Leyka") || Hit.collider.CompareTag("Boksit") || Hit.collider.CompareTag("Ferrum") || Hit.collider.CompareTag("Kuprit") || Hit.collider.CompareTag("Halkopirit") || Hit.collider.CompareTag("Marganec")))
             {
                 E.SetActive(true);
             }
+            else if (Hit.collider.tag == "Tverdost" && objectGrabbable == null && FirstRoom.can) text1.SetActive(true);
+            else if (Hit.collider.CompareTag("Sostav") && objectGrabbable == null) text2.SetActive(true);
+            else if (Hit.collider.CompareTag("Vlashnost") && objectGrabbable == null) text3.SetActive(true);
+            else if (Hit.collider.CompareTag("Magnit") && objectGrabbable == null) text4.SetActive(true);
+            else if (Hit.collider.CompareTag("Plotnost") && objectGrabbable == null) text5.SetActive(true);
 
-            else E.SetActive(false);
+            else
+            {
+                E.SetActive(false);
+                text1.SetActive(false);
+                text2.SetActive(false);
+                text3.SetActive(false);
+                text4.SetActive(false);
+                text5.SetActive(false);
+            }
         }
-        else E.SetActive(false);
+        else
+        {
+            E.SetActive(false);
+            text1.SetActive(false);
+            text2.SetActive(false);
+            text3.SetActive(false);
+            text4.SetActive(false);
+            text5.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (objectGrabbable == null)
