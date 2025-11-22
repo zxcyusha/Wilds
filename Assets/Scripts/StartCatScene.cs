@@ -19,6 +19,7 @@ public class StartCatScene : MonoBehaviour
     public AudioSource tulum;
     public AudioSource liftOpen;
     public static bool CanSettings = false;
+    public GameObject Instrukcia;
     private int i = 0;
     private string s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
     private string s2 = "С каждым днём всё труднее придумывать причины оставаться здесь.";
@@ -120,10 +121,23 @@ public class StartCatScene : MonoBehaviour
         door1.SetBool("Open", true);
         door2.SetBool("open", true);
         FonShym2.Play();
+        liftOpen.Play();
+        Invoke("StartGame", 2f);
+    }
+    private void a() { pym.Play(); }
+
+    private void StartGame()
+    {
         kamera.GetComponent<CinemachineBrain>().enabled = true;
         player.GetComponent<AnimatorCotroller>().enabled = true;
         CanSettings = true;
-        liftOpen.Play();
+        Instrukcia.SetActive(true);
+        Invoke("dalshe", 3f);
     }
-    private void a() { pym.Play(); }
+    private void dalshe()
+    {
+        Instrukcia.SetActive(false);
+        Instrukcia.GetComponent<TextMeshProUGUI>().text = "Чтобы выйти в меню паузы, нажми на esc. Приятной игры!";
+        Instrukcia.SetActive(true);
+    }
 }

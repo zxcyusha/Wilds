@@ -14,9 +14,12 @@ public class ItemPicker : MonoBehaviour
     [SerializeField] private float duration = 0.5f;
     [SerializeField] private LayerMask pickUpLayerMask;
     [SerializeField] private GameObject F;
+    public GameObject Instrukcia;
+    public AudioSource InstrZvuk;
     private Quaternion closedRot;
     private Quaternion openRot;
     public bool isOpen;
+    private bool instr = false;
 
     private void Awake()
     {
@@ -28,7 +31,7 @@ public class ItemPicker : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 4f, pickUpLayerMask))
         {
-            if ((hit.collider.CompareTag("Podnos") && (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")) || hit.collider.CompareTag("Door")) F.SetActive(true);
+            if ((hit.collider.CompareTag("Podnos") && (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")) || hit.collider.CompareTag("Door") || hit.collider.CompareTag("FirstDoor")) F.SetActive(true);
             else F.SetActive(false);
         }
         else F.SetActive(false);
@@ -36,7 +39,7 @@ public class ItemPicker : MonoBehaviour
         {
             if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit Hit, pickRange))
             {
-                if ((Hit.collider.CompareTag("Door")))
+                if (Hit.collider.CompareTag("Door") || Hit.collider.CompareTag("FirstDoor"))
                 {
                     if (isOpen)
                     {
@@ -49,10 +52,22 @@ public class ItemPicker : MonoBehaviour
                         OpenDoor.Play();
                         StartCoroutine(RotateDoor(closedRot, openRot, Hit.collider.gameObject));
                         isOpen = !isOpen;
+                        if (Hit.collider.CompareTag("FirstDoor") && !instr)
+                        {
+
+                            Instrukcia.SetActive(true);
+                            instr = true;
+                            InstrZvuk.Play();
+                        }
                     }
                 }
 
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Instrukcia.SetActive(false);
         }
     }
 

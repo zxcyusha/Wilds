@@ -31,7 +31,7 @@ public class PlayerPickUpDrop : MonoBehaviour
                 E.SetActive(true);
             }
             else if (Hit.collider.tag == "Tverdost" && objectGrabbable == null && FirstRoom.can) text1.SetActive(true);
-            else if (Hit.collider.CompareTag("Sostav") && objectGrabbable == null) text2.SetActive(true);
+            else if (Hit.collider.CompareTag("Sostav") && objectGrabbable == null && FirstRoom.can1) text2.SetActive(true);
             else if (Hit.collider.CompareTag("Vlashnost") && objectGrabbable == null) text3.SetActive(true);
             else if (Hit.collider.CompareTag("Magnit") && objectGrabbable == null) text4.SetActive(true);
             else if (Hit.collider.CompareTag("Plotnost") && objectGrabbable == null) text5.SetActive(true);

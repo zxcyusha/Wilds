@@ -19,6 +19,7 @@ TagManager:
   - Vlashnost
   - kamen
   - Magnit
+  - FirstDoor
   layers:
   - Default
   - TransparentFX
