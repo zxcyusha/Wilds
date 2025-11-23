@@ -57,18 +57,26 @@ public class AnimatorCotroller : MonoBehaviour
         {
             anim.SetTrigger("Jump");
         }
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) Steps.Play();
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            Steps.Stop();
-            Running.Play();
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        if (!BadEnd.end)
         {
-            Steps.Play();
-            Running.Stop();
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) Steps.Play();
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Steps.Stop();
+                Running.Play();
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+            {
+                Steps.Play();
+                Running.Stop();
+            }
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            {
+                Steps.Stop();
+                Running.Stop();
+            }
         }
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        else
         {
             Steps.Stop();
             Running.Stop();

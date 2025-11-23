@@ -15,6 +15,7 @@ MonoBehaviour:
   settings:
   - {fileID: 269772096715922512}
   - {fileID: 8535401560527966670}
+  - {fileID: 1560007329270505461}
 --- !u!114 &269772096715922512
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -73,14 +74,14 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   colorFilter:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   hueShift:
     overrideState: 0
     value: 0
   saturation:
-    overrideState: 1
-    value: -45
+    overrideState: 0
+    value: 0
   brightness:
     overrideState: 0
     value: 0
@@ -89,7 +90,7 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 0
-    value: 33
+    value: 18
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1326,6 +1327,55 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &1560007329270505461
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 2.32
+  color:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 7.16
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &8535401560527966670
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1353,13 +1403,13 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.56
+    value: 0.488
   smoothness:
     overrideState: 1
-    value: 0.478
+    value: 0.474
   roundness:
     overrideState: 1
-    value: 0.657
+    value: 0.95
   rounded:
     overrideState: 0
     value: 0
