@@ -40,11 +40,11 @@ public class TakeListok : MonoBehaviour
     public Image im29;
     public Image im30;
 
-    private int rightMAG;
-    private int rightPLOT;
-    private int rightTVERD;
-    private int rightSOSTAV;
-    private int rightVLASH;
+    public static int rightMAG;
+    public static int rightPLOT;
+    public static int rightTVERD;
+    public static int rightSOSTAV;
+    public static int rightVLASH;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R) && List.activeInHierarchy)

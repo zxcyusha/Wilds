@@ -28,6 +28,9 @@ public class Cart : MonoBehaviour
     private bool napolnili = false;
     private bool prikrepiliList = false;
     private int count = 0;
+    public bool TELESKI = true;
+    public static bool OTPRAVILI = false;
+    public static bool PRAVILNOOTVETIL;
 
     private void Start()
     {
@@ -36,6 +39,7 @@ public class Cart : MonoBehaviour
     }
     void Update()
     {
+        ProverkaPravilnosti();
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))
         {
             if (Hit.collider.CompareTag("Teleshka"))
@@ -82,7 +86,7 @@ public class Cart : MonoBehaviour
 
                 else
                 {
-                    if (!napolnili)
+                    if (!napolnili && TELESKI)
                     {
                         telText.SetActive(true);
                         F.SetActive(false);
@@ -95,12 +99,13 @@ public class Cart : MonoBehaviour
                     {
                         prikrepiList.SetActive(true);
                     }
-                    else if (prikrepiliList)
+                    else if (prikrepiliList && !OTPRAVILI)
                     {
                         tolkniTel.SetActive(true);
                         if (Vector3.Distance(playerCameraTransform.position, Teleshka.transform.position) <= 2f)
                         {
                             animator.SetBool("Array", true);
+                            OTPRAVILI = true;
                         }
                     }
                     F.SetActive(false);
@@ -124,6 +129,15 @@ public class Cart : MonoBehaviour
             prikrepiList.SetActive(false);
             tolkniTel.SetActive(false);
         }
+    }
+
+    private bool ProverkaPravilnosti()
+    {
+        if ((FirstRoom.R1 == TakeListok.rightMAG) && (FirstRoom.R2 == TakeListok.rightPLOT) && (FirstRoom.R3 == TakeListok.rightTVERD) && (FirstRoom.R4 == TakeListok.rightSOSTAV) && (FirstRoom.R5 == TakeListok.rightVLASH))
+        {
+            return true;
+        }
+        else return false;
     }
 
 }

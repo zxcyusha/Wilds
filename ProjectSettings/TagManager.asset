@@ -21,6 +21,12 @@ TagManager:
   - Magnit
   - FirstDoor
   - Teleshka
+  - LDoor
+  - Carts
+  - lb_bird
+  - lb_groundTarget
+  - lb_perchTarget
+  - Nanometr
   layers:
   - Default
   - TransparentFX

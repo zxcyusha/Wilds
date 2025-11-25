@@ -18,6 +18,7 @@ public class ItemPicker : MonoBehaviour
     public AudioSource InstrZvuk;
     private Quaternion closedRot;
     private Quaternion openRot;
+    private Quaternion open;
     public bool isOpen;
     private bool instr = false;
 
@@ -25,6 +26,7 @@ public class ItemPicker : MonoBehaviour
     {
         closedRot = Quaternion.Euler(0, 0, 0);
         openRot = Quaternion.Euler(0, 80, 0);
+        open = Quaternion.Euler(0, -80, 0);
     }
 
     void Update()
@@ -59,6 +61,22 @@ public class ItemPicker : MonoBehaviour
                             instr = true;
                             InstrZvuk.Play();
                         }
+                    }
+                }
+                else if (Hit.collider.CompareTag("LDoor"))
+                {
+
+                    if (isOpen)
+                    {
+                        OpenDoor.Play();
+                        StartCoroutine(RotateDoor(open, closedRot, Hit.collider.gameObject));
+                        isOpen = !isOpen;
+                    }
+                    else
+                    {
+                        OpenDoor.Play();
+                        StartCoroutine(RotateDoor(closedRot, open, Hit.collider.gameObject));
+                        isOpen = !isOpen;
                     }
                 }
 
