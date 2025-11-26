@@ -14,6 +14,7 @@ public class Nanometr : MonoBehaviour
     public GameObject StrelkaR;
     public AudioSource Molodec;
     public AudioSource KranKrutitsa;
+    public GameObject krutilka;
     public float Left;
     public float Right;
     public float speed = 0.01f;
@@ -22,8 +23,6 @@ public class Nanometr : MonoBehaviour
 
     void Start()
     {
-        //StrelkaL.SetActive(false);
-        //StrelkaR.SetActive(false);
         StrelkaRotation();
     }
 
@@ -49,10 +48,12 @@ public class Nanometr : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     StrelkaCher.transform.Rotate(Vector3.right * -speed);
+                    krutilka.transform.Rotate(Vector3.forward * speed);
                 }
                 if (Input.GetKey(KeyCode.Q))
                 {
                     StrelkaCher.transform.Rotate(Vector3.right * speed);
+                    krutilka.transform.Rotate(Vector3.forward * -speed);
                 }
 
                 if ((Quaternion.Angle(StrelkaCher.transform.rotation, StrelkaZel.transform.rotation) < 2f))

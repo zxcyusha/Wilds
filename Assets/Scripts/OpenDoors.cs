@@ -18,6 +18,7 @@ public class ItemPicker : MonoBehaviour
     public AudioSource InstrZvuk;
     private Quaternion closedRot;
     private Quaternion openRot;
+    private Quaternion openRot1;
     private Quaternion open;
     public bool isOpen;
     private bool instr = false;
@@ -28,7 +29,7 @@ public class ItemPicker : MonoBehaviour
     {
         closedRot = Quaternion.Euler(0, 0, 0);
         openRot = Quaternion.Euler(0, 80, 0);
-        open = Quaternion.Euler(0, -80, 0);
+        openRot1 = Quaternion.Euler(0, -80, 0);
     }
 
     void Update()
@@ -71,15 +72,15 @@ public class ItemPicker : MonoBehaviour
                     if (isOpen)
                     {
                         OpenDoor.Play();
-                        StartCoroutine(RotateDoor(open, closedRot, door1));
-                        StartCoroutine(RotateDoor(openRot, closedRot, door2));
+                        StartCoroutine(RotateDoor(openRot, closedRot, door1));
+                        StartCoroutine(RotateDoor(openRot1, closedRot, door2));
                         isOpen = !isOpen;
                     }
                     else
                     {
                         OpenDoor.Play();
-                        StartCoroutine(RotateDoor(closedRot, open, door1));
-                        StartCoroutine(RotateDoor(closedRot, openRot, door2));
+                        StartCoroutine(RotateDoor(closedRot, openRot, door1));
+                        StartCoroutine(RotateDoor(closedRot, openRot1, door2));
                         isOpen = !isOpen;
                     }
                 }
