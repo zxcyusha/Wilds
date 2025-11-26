@@ -27,6 +27,8 @@ TagManager:
   - lb_groundTarget
   - lb_perchTarget
   - Nanometr
+  - Nanometr1
+  - Nanometr2
   layers:
   - Default
   - TransparentFX

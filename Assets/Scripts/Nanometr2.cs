@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Nanometr : MonoBehaviour
+public class Nanometr2 : MonoBehaviour
 {
     [SerializeField] private GameObject StrelkaZel;
     [SerializeField] private GameObject StrelkaCher;
@@ -18,32 +18,24 @@ public class Nanometr : MonoBehaviour
     public float Right;
     public float speed = 0.01f;
     private bool z1 = true;
-    private float rotZel;
 
     void Start()
     {
-        //StrelkaL.SetActive(false);
-        //StrelkaR.SetActive(false);
-        StrelkaRotation();
+        StrelkaZel.transform.rotation = Quaternion.Euler(13, -180, 0);
+        StrelkaCher.transform.rotation = Quaternion.Euler(134, 180, 0);
+        
+      
     }
 
     void Update()
     {
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, 3f, pickUpLayerMask))
         {
-            if (Hit.collider.CompareTag("Nanometr") && z1)
+            
+            if ((Hit.collider.CompareTag("Nanometr1")) && z1)
             {
                 StrelkaL.SetActive(true);
                 StrelkaR.SetActive(true);
-            }
-            else
-            {
-                StrelkaL.SetActive(false);
-                StrelkaR.SetActive(false);
-            }
-
-            if ((Hit.collider.CompareTag("Nanometr") && z1 == true))
-                {
                 if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q))) KranKrutitsa.Play();
                 if ((Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.Q))) KranKrutitsa.Stop();
                 if (Input.GetKey(KeyCode.E))
@@ -55,7 +47,7 @@ public class Nanometr : MonoBehaviour
                     StrelkaCher.transform.Rotate(Vector3.right * speed);
                 }
 
-                if ((Quaternion.Angle(StrelkaCher.transform.rotation, StrelkaZel.transform.rotation) < 2f))
+                if ((Quaternion.Angle(StrelkaCher.transform.rotation, StrelkaZel.transform.rotation) < 1f))
                 {
                     {
                         Molodec.Play();
@@ -67,17 +59,19 @@ public class Nanometr : MonoBehaviour
                     }
                 }
             }
+
+            else
+            {
+                StrelkaL.SetActive(false);
+                StrelkaR.SetActive(false);
+            }
         }
+
         else
         {
             StrelkaL.SetActive(false);
             StrelkaR.SetActive(false);
         }
-    }
-    private void StrelkaRotation()
-    {
-        rotZel = Random.Range(Left, Right);
-        StrelkaZel.transform.rotation = Quaternion.Euler(rotZel, 90, 0);
     }
 
 }

@@ -21,6 +21,8 @@ public class ItemPicker : MonoBehaviour
     private Quaternion open;
     public bool isOpen;
     private bool instr = false;
+    public GameObject door1;
+    public GameObject door2;
 
     private void Awake()
     {
@@ -33,7 +35,7 @@ public class ItemPicker : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 4f, pickUpLayerMask))
         {
-            if ((hit.collider.CompareTag("Podnos") && (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")) || hit.collider.CompareTag("Door") || hit.collider.CompareTag("FirstDoor")) F.SetActive(true);
+            if ((hit.collider.CompareTag("Podnos") && (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)")) || hit.collider.CompareTag("Door") || hit.collider.CompareTag("FirstDoor") || hit.collider.CompareTag("LDoor")) F.SetActive(true);
             else F.SetActive(false);
         }
         else F.SetActive(false);
@@ -69,13 +71,15 @@ public class ItemPicker : MonoBehaviour
                     if (isOpen)
                     {
                         OpenDoor.Play();
-                        StartCoroutine(RotateDoor(open, closedRot, Hit.collider.gameObject));
+                        StartCoroutine(RotateDoor(open, closedRot, door1));
+                        StartCoroutine(RotateDoor(openRot, closedRot, door2));
                         isOpen = !isOpen;
                     }
                     else
                     {
                         OpenDoor.Play();
-                        StartCoroutine(RotateDoor(closedRot, open, Hit.collider.gameObject));
+                        StartCoroutine(RotateDoor(closedRot, open, door1));
+                        StartCoroutine(RotateDoor(closedRot, openRot, door2));
                         isOpen = !isOpen;
                     }
                 }
