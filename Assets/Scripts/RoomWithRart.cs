@@ -26,6 +26,7 @@ public class RoomWithRart : MonoBehaviour
     private bool a = true;
     private bool zvuk = true;
     public bool OTPRAVILITELESHKI = false;
+    public bool DA = false;
 
     private void Start()
     {
@@ -33,9 +34,9 @@ public class RoomWithRart : MonoBehaviour
     }
     private void Update()
     {
-        if (Cart.OTPRAVILI)
+        if (Cart.OTPRAVILI || DA)
         {
-            if ((Vector3.Distance(transform.position, playerCamera.transform.position) <= 12.4f) && !telesh)
+            if (((Vector3.Distance(transform.position, playerCamera.transform.position) <= 12.4f) && !telesh) || DA)
             {
                 Teleshka.GetComponent<Animator>().SetBool("Priezshaet", true);
                 Teleshka.GetComponent<AudioSource>().Play();

@@ -24,6 +24,8 @@ public class ItemPicker : MonoBehaviour
     private bool instr = false;
     public GameObject door1;
     public GameObject door2;
+    private bool instrPtica = false;
+    public GameObject InstruksiaPtica;
 
     private void Awake()
     {
@@ -68,7 +70,12 @@ public class ItemPicker : MonoBehaviour
                 }
                 else if (Hit.collider.CompareTag("LDoor"))
                 {
-
+                    if (!instrPtica)
+                    {
+                        InstruksiaPtica.SetActive(true);
+                        InstrZvuk.Play();
+                        instr = true;
+                    }
                     if (isOpen)
                     {
                         OpenDoor.Play();
@@ -91,6 +98,7 @@ public class ItemPicker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Instrukcia.SetActive(false);
+            InstruksiaPtica.SetActive(false);
         }
     }
 

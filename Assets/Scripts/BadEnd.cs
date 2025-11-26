@@ -22,7 +22,8 @@ public class BadEnd : MonoBehaviour
         Player.position = new Vector3(-55.8499985f, 0.166999996f, -4.6500001f);
         if (postProcess.TryGetSettings(out ambientOcclusion))
         {
-            ambientOcclusion.enabled.value = true;
+            ambientOcclusion.intensity.value = 1f;
+            ambientOcclusion.thicknessModifier.value = 4f;
             audioEnd = GetComponent<AudioSource>();
         }
     }
