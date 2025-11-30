@@ -18,7 +18,8 @@ public class Nanometr2 : MonoBehaviour
     public float Left;
     public float Right;
     public float speed = 0.01f;
-    private bool z1 = true;
+    public bool z1 = true;
+    public static bool PODKYTILI3 = false;
 
     void Start()
     {
@@ -58,7 +59,7 @@ public class Nanometr2 : MonoBehaviour
                         StrelkaR.SetActive(false);
                         KranKrutitsa.Stop();
                         z1 = false;
-
+                        PODKYTILI3 = true;
                     }
                 }
             }

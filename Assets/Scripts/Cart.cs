@@ -25,9 +25,9 @@ public class Cart : MonoBehaviour
     [SerializeField] private GameObject tolkniTel;
     private Animator animator;
     private ObjectGrabbable objectGrabbable;
-    private bool napolnili = false;
-    private bool prikrepiliList = false;
-    private int count = 0;
+    public static bool napolnili = false;
+    public static bool prikrepiliList = false;
+    public static int count = 0;
     public bool TELESKI = true;
     public static bool OTPRAVILI = false;
     public static bool PRAVILNOOTVETIL;
@@ -81,6 +81,7 @@ public class Cart : MonoBehaviour
                         List.transform.localScale = new Vector3(0.099f, 15.116f, 26.42f);
                         E.SetActive(false);
                         prikrepiliList = true;
+                        TakeListok.canTake = true;
                     }
                 }
 

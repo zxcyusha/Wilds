@@ -30,6 +30,12 @@ TagManager:
   - Nanometr1
   - Nanometr2
   - Shkala
+  - Bur
+  - Lift
+  - Raspisanie
+  - DoorToCarps
+  - Babaka
+  - Taburetka
   layers:
   - Default
   - TransparentFX

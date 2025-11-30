@@ -18,15 +18,16 @@ public class RoomWithRart : MonoBehaviour
     public Transform Exit4;
     public AudioSource vipolneno;
     public float speed;
-    private bool telesh = false;
+    public static bool telesh = false;
     public bool game = false;
     private bool katitsa = true;
     public Vector3 telPer;
     private AudioSource skip;
     private bool a = true;
     private bool zvuk = true;
-    public bool OTPRAVILITELESHKI = false;
-    public bool DA = false;
+    public static bool OTPRAVILITELESHKI = false; //
+    public bool DA = false; // игнор
+    public static bool CartYes = false;
 
     private void Start()
     {
@@ -141,6 +142,7 @@ public class RoomWithRart : MonoBehaviour
                     {
                         vipolneno.Play();
                         zvuk = false;
+                        CartYes = true;
                     }
                     Invoke("end", 2.5f);
                 }
@@ -151,6 +153,7 @@ public class RoomWithRart : MonoBehaviour
                     {
                         vipolneno.Play();
                         zvuk = false;
+                        CartYes = true;
                     }
                     Invoke("end", 2.5f);
                 }
@@ -161,16 +164,18 @@ public class RoomWithRart : MonoBehaviour
                     {
                         vipolneno.Play();
                         zvuk = false;
+                        CartYes = true;
                     }
                     Invoke("end", 2.5f);
                 }
-                if ((Vector3.Distance(Teleshka.transform.position, Exit4.transform.position) <= 8f) && katitsa)
+                if ((Vector3.Distance(Teleshka.transform.position, Exit4.transform.position) <= 4f) && katitsa)
                 {
                     Teleshka.transform.position = Vector3.Lerp(Teleshka.transform.position, Teleshka.transform.position + telPer, Time.deltaTime);
                     if (zvuk)
                     {
                         vipolneno.Play();
                         zvuk = false;
+                        CartYes = true;
                     }
                     Invoke("end", 2.5f);
                 }
@@ -193,7 +198,7 @@ public class RoomWithRart : MonoBehaviour
     {
         if (game)
         {
-            katitsa = false;
+            Invoke("stopTel", 3f);
             playerCamera.GetComponent<CinemachineBrain>().enabled = true;
             Player.GetComponent<AnimatorCotroller>().enabled = true;
             InstrText.SetActive(false);
@@ -202,4 +207,6 @@ public class RoomWithRart : MonoBehaviour
             OTPRAVILITELESHKI = true;
         }
     }
+
+    private void stopTel() { katitsa = false; }
 }

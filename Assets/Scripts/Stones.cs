@@ -23,7 +23,7 @@ public class Stones : MonoBehaviour
     private GameObject kuprit;
     private GameObject halkopirit;
     private GameObject marganec;
-    public bool poloshili = false;
+    public static bool poloshili = false;
     void Update()
     {
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))

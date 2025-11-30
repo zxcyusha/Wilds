@@ -52,7 +52,6 @@ public class StartCatScene : MonoBehaviour
         while (i <= (soob.Length - 1))
         {
             yield return new WaitForSeconds(speed);
-            Debug.Log(i);
             text.text += soob[i];
             i++;
         }

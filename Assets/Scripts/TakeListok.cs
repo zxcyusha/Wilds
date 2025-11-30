@@ -45,6 +45,14 @@ public class TakeListok : MonoBehaviour
     public static int rightTVERD;
     public static int rightSOSTAV;
     public static int rightVLASH;
+
+    public static bool vibrali1 = false;
+    public static bool vibrali2 = false;
+    public static bool vibrali3 = false;
+    public static bool vibrali4 = false;
+    public static bool vibrali5 = false;
+
+    public static bool canTake = true;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R) && List.activeInHierarchy)
@@ -54,7 +62,7 @@ public class TakeListok : MonoBehaviour
         }
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 4f, pickUpLayerMask))
         {
-            if (hit.collider.CompareTag("Listok"))
+            if (hit.collider.CompareTag("Listok") && canTake)
             {
                 EandR.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.R))
@@ -78,8 +86,7 @@ public class TakeListok : MonoBehaviour
         im3.color = new Color(255, 255, 255, 0);
         im4.color = new Color(255, 255, 255, 0);
         rightMAG = 1;
-        Debug.Log(FirstRoom.R1);
-        Debug.Log(rightMAG);
+        vibrali1 = true;
     }
     public void H2()
     {
@@ -88,8 +95,7 @@ public class TakeListok : MonoBehaviour
         im3.color = new Color(255, 255, 255, 0);
         im4.color = new Color(255, 255, 255, 0);
         rightMAG = 2;
-        Debug.Log(FirstRoom.R1);
-        Debug.Log(rightMAG);
+        vibrali1 = true;
     }
     public void H3()
     {
@@ -98,8 +104,7 @@ public class TakeListok : MonoBehaviour
         im1.color = new Color(255, 255, 255, 0);
         im4.color = new Color(255, 255, 255, 0);
         rightMAG = 3;
-        Debug.Log(FirstRoom.R1);
-        Debug.Log(rightMAG);
+        vibrali1 = true;
     }
     public void H4()
     {
@@ -108,8 +113,7 @@ public class TakeListok : MonoBehaviour
         im3.color = new Color(255, 255, 255, 0);
         im1.color = new Color(255, 255, 255, 0);
         rightMAG = 4;
-        Debug.Log(FirstRoom.R1);
-        Debug.Log(rightMAG);
+        vibrali1 = true;
     }
     
     public void G1()
@@ -126,8 +130,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 1;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G2()
     {
@@ -143,8 +146,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 1;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G3()
     {
@@ -160,8 +162,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 12;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G4()
     {
@@ -177,8 +178,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 2;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G5()
     {
@@ -194,8 +194,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 2;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G6()
     {
@@ -211,8 +210,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 23;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
         public void G7()
     {
@@ -228,8 +226,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 3;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G8()
     {
@@ -245,8 +242,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 3;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G9()
     {
@@ -262,8 +258,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 3;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G10()
     {
@@ -279,8 +274,7 @@ public class TakeListok : MonoBehaviour
         im5.color = new Color(255, 255, 255, 0);
         im15.color = new Color(255, 255, 255, 0);
         rightPLOT = 34;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
     public void G11()
     {
@@ -296,8 +290,7 @@ public class TakeListok : MonoBehaviour
         im14.color = new Color(255, 255, 255, 0);
         im5.color = new Color(255, 255, 255, 0);
         rightPLOT = 4;
-        Debug.Log(FirstRoom.R2);
-        Debug.Log(rightPLOT);
+        vibrali2 = true;
     }
 
     public void Q1()
@@ -310,8 +303,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 1;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q2()
     {
@@ -323,8 +315,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 2;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q3()
     {
@@ -336,8 +327,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 3;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q4()
     {
@@ -349,8 +339,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 4;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q5()
     {
@@ -362,8 +351,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 5;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q6()
     {
@@ -375,8 +363,7 @@ public class TakeListok : MonoBehaviour
         im16.color = new Color(255, 255, 255, 0);
         im22.color = new Color(255, 255, 255, 0);
         rightTVERD = 6;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
     public void Q7()
     {
@@ -388,8 +375,7 @@ public class TakeListok : MonoBehaviour
         im21.color = new Color(255, 255, 255, 0);
         im16.color = new Color(255, 255, 255, 0);
         rightTVERD = 7;
-        Debug.Log(FirstRoom.R3);
-        Debug.Log(rightTVERD);
+        vibrali3 = true;
     }
 
     public void R1()
@@ -400,8 +386,7 @@ public class TakeListok : MonoBehaviour
         im26.color = new Color(255, 255, 255, 0);
         im27.color = new Color(255, 255, 255, 0);
         rightSOSTAV = 1;
-        Debug.Log(FirstRoom.R4);
-        Debug.Log(rightSOSTAV);
+        vibrali4 = true;
     }
     public void R2()
     {
@@ -411,8 +396,7 @@ public class TakeListok : MonoBehaviour
         im26.color = new Color(255, 255, 255, 0);
         im27.color = new Color(255, 255, 255, 0);
         rightSOSTAV = 2;
-        Debug.Log(FirstRoom.R4);
-        Debug.Log(rightSOSTAV);
+        vibrali4 = true;
     }
     public void R3()
     {
@@ -422,8 +406,7 @@ public class TakeListok : MonoBehaviour
         im26.color = new Color(255, 255, 255, 0);
         im27.color = new Color(255, 255, 255, 0);
         rightSOSTAV = 3;
-        Debug.Log(FirstRoom.R4);
-        Debug.Log(rightSOSTAV);
+        vibrali4 = true;
     }
     public void R4()
     {
@@ -433,8 +416,7 @@ public class TakeListok : MonoBehaviour
         im23.color = new Color(255, 255, 255, 0);
         im27.color = new Color(255, 255, 255, 0);
         rightSOSTAV = 4;
-        Debug.Log(FirstRoom.R4);
-        Debug.Log(rightSOSTAV);
+        vibrali4 = true;
     }
     public void R5()
     {
@@ -444,8 +426,7 @@ public class TakeListok : MonoBehaviour
         im26.color = new Color(255, 255, 255, 0);
         im23.color = new Color(255, 255, 255, 0);
         rightSOSTAV = 5;
-        Debug.Log(FirstRoom.R4);
-        Debug.Log(rightSOSTAV);
+        vibrali4 = true;
     }
 
     public void M1()
@@ -454,8 +435,7 @@ public class TakeListok : MonoBehaviour
         im29.color = new Color(255, 255, 255, 0);
         im30.color = new Color(255, 255, 255, 0);
         rightVLASH = 1;
-        Debug.Log(FirstRoom.R5);
-        Debug.Log(rightVLASH);
+        vibrali5 = true;
     }
     public void M2()
     {
@@ -463,8 +443,7 @@ public class TakeListok : MonoBehaviour
         im28.color = new Color(255, 255, 255, 0);
         im30.color = new Color(255, 255, 255, 0);
         rightVLASH = 2;
-        Debug.Log(FirstRoom.R5);
-        Debug.Log(rightVLASH);
+        vibrali5 = true;
     }
     public void M3()
     {
@@ -472,7 +451,40 @@ public class TakeListok : MonoBehaviour
         im29.color = new Color(255, 255, 255, 0);
         im28.color = new Color(255, 255, 255, 0);
         rightVLASH = 3;
-        Debug.Log(FirstRoom.R5);
-        Debug.Log(rightVLASH);
+        vibrali5 = true;
+    }
+
+    public void NetGalocek()
+    {
+        im1.color = new Color(255, 255, 255, 0);
+        im2.color = new Color(255, 255, 255, 0);
+        im3.color = new Color(255, 255, 255, 0);
+        im4.color = new Color(255, 255, 255, 0);
+        im5.color = new Color(255, 255, 255, 0);
+        im6.color = new Color(255, 255, 255, 0);
+        im7.color = new Color(255, 255, 255, 0);
+        im8.color = new Color(255, 255, 255, 0);
+        im9.color = new Color(255, 255, 255, 0);
+        im10.color = new Color(255, 255, 255, 0);
+        im11.color = new Color(255, 255, 255, 0);
+        im12.color = new Color(255, 255, 255, 0);
+        im13.color = new Color(255, 255, 255, 0);
+        im14.color = new Color(255, 255, 255, 0);
+        im15.color = new Color(255, 255, 255, 0);
+        im16.color = new Color(255, 255, 255, 0);
+        im17.color = new Color(255, 255, 255, 0);
+        im18.color = new Color(255, 255, 255, 0);
+        im19.color = new Color(255, 255, 255, 0);
+        im20.color = new Color(255, 255, 255, 0);
+        im21.color = new Color(255, 255, 255, 0);
+        im22.color = new Color(255, 255, 255, 0);
+        im23.color = new Color(255, 255, 255, 0);
+        im24.color = new Color(255, 255, 255, 0);
+        im25.color = new Color(255, 255, 255, 0);
+        im26.color = new Color(255, 255, 255, 0);
+        im27.color = new Color(255, 255, 255, 0);
+        im28.color = new Color(255, 255, 255, 0);
+        im29.color = new Color(255, 255, 255, 0);
+        im30.color = new Color(255, 255, 255, 0);
     }
 }

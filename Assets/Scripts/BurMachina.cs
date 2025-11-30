@@ -8,65 +8,95 @@ public class BurMachina : MonoBehaviour
     public LayerMask pickUpLayerMask;
     public GameObject NashmiNaF;
     public GameObject ShkalaPanel;
-    public GameObject Strelochka;
+    public GameObject TextBur;
+    public GameObject PanelBur;
+    public AudioSource ZvukBoor;
+    public GameObject PatMilLet;
+    public AudioSource yra;
+    public GameObject instruksia;
+    public AudioSource InstrZvuk;
+    public GameObject Kuprit;
+    public GameObject Gematit;
+    public GameObject Boksit;
+    public GameObject Halkopirit;
+    private bool layk = false;
+    private bool instrBur = false;
 
-    public float speed = 2f;
-    public float minY = -2f;
-    public float maxY = 2f;
+    public static bool BoorSdelali = false;
 
-    private bool movingUp = true;
-    private bool isStopped = false;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 3f, pickUpLayerMask))
+        if (!DAYS.DAY3)
         {
-            if (hit.collider.CompareTag("Shkala"))
+            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 3f, pickUpLayerMask))
             {
-                NashmiNaF.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.F))
+                if (hit.collider.CompareTag("Shkala") && !Shkala.isStopped)
                 {
-                    ShkalaPanel.SetActive(true);
-                    if (isStopped) return;
-                    Vector3 pos = transform.localPosition;
-
-                    if (movingUp)
+                    NashmiNaF.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
                     {
-                        pos.y += speed * Time.deltaTime;
-                        if (pos.y >= maxY)
-                        {
-                            pos.y = maxY;
-                            movingUp = false;
-                        }
+                        ShkalaPanel.SetActive(true);
+                        InstrZvuk.Play();
                     }
-                    else
-                    {
-                        pos.y -= speed * Time.deltaTime;
-                        if (pos.y <= minY)
-                        {
-                            pos.y = minY;
-                            movingUp = true;
-                        }
-                    }
-                    transform.localPosition = pos;
+                }
 
+                else if (hit.collider.CompareTag("Bur") && Shkala.isStopped && !MouseCoordinates.isStop)
+                {
+                    TextBur.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        ZvukBoor.Play();
+                        PanelBur.SetActive(true);
+                        Cursor.visible = true;
+                        layk = true;
+                    }
+                }
+                else if ((hit.collider.CompareTag("Bur") || hit.collider.CompareTag("Shkala")) && !instrBur)
+                {
+                    InstrZvuk.Play();
+                    instruksia.SetActive(true);
+                    instrBur = true;
+                }
+                else
+                {
+                    NashmiNaF.SetActive(false);
+                    TextBur.SetActive(false);
                 }
             }
             else
             {
                 NashmiNaF.SetActive(false);
+                TextBur.SetActive(false);
+            }
+
+            if (Input.GetMouseButtonDown(0) && layk && PanelBur.activeInHierarchy)
+            {
+                Cursor.visible = false;
+                yra.Play();
+                MouseCoordinates.isStop = true;
+                PatMilLet.SetActive(true);
+                Invoke("a", 3f);
+                Invoke("b", 5f);
+                StartCoroutine(MouseCoordinates.FadeOutCoroutine(ZvukBoor, 3f));
+                BoorSdelali = true;
+            }
+            if (Input.GetKey(KeyCode.Return))
+            {
+                instruksia.SetActive(false);
             }
         }
-        else
-        {
-            NashmiNaF.SetActive(false);
-        }
+    }
 
+    private void b()
+    {
+        PatMilLet.SetActive(false);
+    }
+    private void a()
+    {
+        PanelBur.SetActive(false);
+        if (DAYS.DAY1) Halkopirit.SetActive(true);
+        else if (DAYS.DAY2) Boksit.SetActive(true);
+        else if (DAYS.DAY4) Gematit.SetActive(true);
+        else if (DAYS.DAY5) Kuprit.SetActive(true);
     }
 }

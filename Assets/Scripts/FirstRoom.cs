@@ -41,43 +41,14 @@ public class FirstRoom : MonoBehaviour
 
     private void Start()
     {
-        vlashnost = Random.Range(0f, 1f);
-        if (vlashnost < 0.1f) vlashnost = 0.1f;
-        if (vlashnost > 0.9f) vlashnost = 0.9f;
-        magVospriim = Random.Range(0, 160);
-        PlotnostZnach = new List<string>{"1", "2", "3", "3a", "4", "4a", "5", "6", "6a", "7"};
-        plotnost = PlotnostZnach[Random.Range(0, 10)];
-        List<float> SostavZnach = new List<float> { Random.Range(500, 600), Random.Range(100, 200), Random.Range(0.05f, 1) };
-        sostav = SostavZnach[Random.Range(0, 3)];
-
-        if (magVospriim <= 29) R1 = 1;
-        else if (magVospriim >= 30 && magVospriim <= 59) R1 = 2; 
-        else if (magVospriim >= 60 && magVospriim <= 119) R1 = 3;
-        else if (magVospriim >= 120 && magVospriim <= 160) R1 = 4;
-
-        if (plotnost == "1" || plotnost == "2") R2 = 1;
-        else if (plotnost == "3") R2 = 12;
-        else if (plotnost == "3a" || plotnost == "4") R2 = 2;
-        else if (plotnost == "4a") R2 = 23;
-        else if (plotnost == "5") R2 = 3;
-        else if (plotnost == "6a") R2 = 34;
-        else if (plotnost == "7") R2 = 4;
-
-        if (sostav >= 0.5f && sostav <= 1) R4 = 4;
-        else if(sostav >= 5 && sostav <= 10) R4 = 3;
-        else if(sostav >= 100 && sostav <= 200) R4 = 2;
-        else if(sostav >= 500 && sostav <= 600) R4 = 1;
-
-        if (vlashnost >= 0 && vlashnost < 0.5) R5 = 1;
-        else if (vlashnost >= 0.5 && vlashnost < 0.8) R5 = 2;
-        else if (vlashnost >= 0.8 && vlashnost <= 1) R5 = 3;
+        RandomZnach();
     }
     void Update()
     {
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))
         {
 
-            if (stones.poloshili)
+            if (Stones.poloshili)
             {
                 if (PlayerPickUpDrop.WhatHolding == "рыжая лейка для душа" || PlayerPickUpDrop.WhatHolding == "тру палка ковырялка" || PlayerPickUpDrop.WhatHolding == "плотностьь")
                 {
@@ -159,8 +130,8 @@ public class FirstRoom : MonoBehaviour
                 if (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)") tverdost = 5;
                 if (PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)") tverdost = 4;
                 if (PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)") tverdost = 6;
-                if (PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)") tverdost = 6;
-                if (PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)") tverdost = 1;
+                if (PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)") tverdost = 1;
+                if (PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)") tverdost = 7;
                 R3 = tverdost;
                 F1.SetActive(true);
                 if (Input.GetKeyUp(KeyCode.F))
@@ -210,5 +181,39 @@ public class FirstRoom : MonoBehaviour
         Inform.SetActive(false);
         can = true;
         can1 = true;
+    }
+
+    public void RandomZnach()
+    {
+        vlashnost = Random.Range(0f, 1f);
+        if (vlashnost < 0.1f) vlashnost = 0.1f;
+        if (vlashnost > 0.9f) vlashnost = 0.9f;
+        magVospriim = Random.Range(0, 160);
+        PlotnostZnach = new List<string> { "1", "2", "3", "3a", "4", "4a", "5", "6", "6a", "7" };
+        plotnost = PlotnostZnach[Random.Range(0, 10)];
+        List<float> SostavZnach = new List<float> { Random.Range(500, 600), Random.Range(100, 200), Random.Range(0.05f, 1) };
+        sostav = SostavZnach[Random.Range(0, 3)];
+
+        if (magVospriim <= 29) R1 = 1;
+        else if (magVospriim >= 30 && magVospriim <= 59) R1 = 2;
+        else if (magVospriim >= 60 && magVospriim <= 119) R1 = 3;
+        else if (magVospriim >= 120 && magVospriim <= 160) R1 = 4;
+
+        if (plotnost == "1" || plotnost == "2") R2 = 1;
+        else if (plotnost == "3") R2 = 12;
+        else if (plotnost == "3a" || plotnost == "4") R2 = 2;
+        else if (plotnost == "4a") R2 = 23;
+        else if (plotnost == "5") R2 = 3;
+        else if (plotnost == "6a") R2 = 34;
+        else if (plotnost == "7") R2 = 4;
+
+        if (sostav >= 0.5f && sostav <= 1) R4 = 4;
+        else if (sostav >= 5 && sostav <= 10) R4 = 3;
+        else if (sostav >= 100 && sostav <= 200) R4 = 2;
+        else if (sostav >= 500 && sostav <= 600) R4 = 1;
+
+        if (vlashnost >= 0 && vlashnost < 0.5) R5 = 1;
+        else if (vlashnost >= 0.5 && vlashnost < 0.8) R5 = 2;
+        else if (vlashnost >= 0.8 && vlashnost <= 1) R5 = 3;
     }
 }

@@ -18,8 +18,9 @@ public class Nanometr : MonoBehaviour
     public float Left;
     public float Right;
     public float speed = 0.01f;
-    private bool z1 = true;
+    public bool z1 = true;
     private float rotZel;
+    public static bool PODKYTILI1 = false;
 
     void Start()
     {
@@ -64,7 +65,7 @@ public class Nanometr : MonoBehaviour
                         StrelkaR.SetActive(false);
                         KranKrutitsa.Stop();
                         z1 = false;
-
+                        PODKYTILI1 = true;
                     }
                 }
             }
@@ -75,7 +76,7 @@ public class Nanometr : MonoBehaviour
             StrelkaR.SetActive(false);
         }
     }
-    private void StrelkaRotation()
+    public void StrelkaRotation()
     {
         rotZel = Random.Range(Left, Right);
         StrelkaZel.transform.rotation = Quaternion.Euler(rotZel, 90, 0);
