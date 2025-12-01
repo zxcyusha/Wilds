@@ -110,6 +110,7 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Stones.poloshili = false;
                         RoomWithRart.telesh = false;
                         DenN.GetComponent<TextMeshProUGUI>().text = "Δενό 3";
                         TemneyushiyEkran.SetActive(true);
@@ -129,6 +130,7 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Stones.poloshili = false;
                         bur.transform.localPosition = new Vector3(1.09f, -6.67f, -16.04f);
                         RoomWithRart.telesh = false;
                         DenN.GetComponent<TextMeshProUGUI>().text = "Δενό 4";
@@ -147,6 +149,7 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Stones.poloshili = false;
                         bur.transform.localPosition = new Vector3(-24.55f, -6.67f, -5.01f);
                         bur.transform.localRotation = Quaternion.Euler(0, 180, 0);
                         RoomWithRart.telesh = false;
