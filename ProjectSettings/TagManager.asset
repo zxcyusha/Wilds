@@ -36,6 +36,8 @@ TagManager:
   - DoorToCarps
   - Babaka
   - Taburetka
+  - Portal
+  - Diary
   layers:
   - Default
   - TransparentFX

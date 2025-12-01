@@ -47,7 +47,7 @@ public class Cart : MonoBehaviour
                 if (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Гематит" || PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)" || PlayerPickUpDrop.WhatHolding == "Гематитт(Clone)" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)")
                 {
                     F.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.F) && count <= 6)
+                    if (Input.GetKeyDown(KeyCode.F) && count <= 3)
                     {
                         napolnenie.SetActive(true);
                         if (PlayerPickUpDrop.WhatHolding == "Боксит" || PlayerPickUpDrop.WhatHolding == "Бокситт(Clone)") color.SetTexture("_MainTex", Boksit);
@@ -55,13 +55,13 @@ public class Cart : MonoBehaviour
                         if (PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)") color.SetTexture("_MainTex", Kuprit);
                         if (PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)") color.SetTexture("_MainTex", Halkopirit);
                         if (PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)") color.SetTexture("_MainTex", Marganec);
-                        napolnenie.transform.localPosition = new Vector3(napolnenie.transform.localPosition.x, napolnenie.transform.localPosition.y + 0.07f, napolnenie.transform.localPosition.x);
+                        napolnenie.transform.localPosition = new Vector3(napolnenie.transform.localPosition.x, napolnenie.transform.localPosition.y + 0.14f, napolnenie.transform.localPosition.x);
                         GameObject obj = Ruka.transform.GetChild(0).gameObject;
                         Destroy(obj);
                         PlayerPickUpDrop.objectGrabbable = null;
                         PlayerPickUpDrop.WhatHolding = "0";
                         count++;
-                        if (count == 6) napolnili = true;
+                        if (count == 3) napolnili = true;
                     }
                     
                 }
@@ -94,7 +94,7 @@ public class Cart : MonoBehaviour
                     }
                 }
 
-                if (count > 5)
+                if (count > 2)
                 {
                     if (!prikrepiliList && !E.activeInHierarchy)
                     {

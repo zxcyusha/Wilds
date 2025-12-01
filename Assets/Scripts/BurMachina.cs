@@ -45,6 +45,7 @@ public class BurMachina : MonoBehaviour
                     TextBur.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        ZvukBoor.volume = 1f;
                         ZvukBoor.Play();
                         PanelBur.SetActive(true);
                         Cursor.visible = true;

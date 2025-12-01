@@ -10,15 +10,20 @@ public class ТряскаКамеры : MonoBehaviour
     [SerializeField] private LayerMask pickUpLayerMask;
 
     public float distance = 3f;
-    public float strength = 0.03f;
+    public static float strength = 0.03f;
     public Image panel;
     public float speed = 0.2f;
-    public bool isTraska;
+    public static bool isTraska;
     public GameObject Babaka;
     public GameObject Player;
     public GameObject Taburetka;
     public GameObject Lightt;
+    public AudioSource Shepolochek;
+    public AudioSource ZvukPtici;
+    private bool ptica = false;
     private bool babaka = false;
+    private bool miliShepolochek = false;
+    public bool PticaEnd = false;
     
     private void Start()
     {
@@ -42,11 +47,26 @@ public class ТряскаКамеры : MonoBehaviour
                 Invoke("NetBabaki", 2f);
             }
 
-            if (DAYS.DAY3 && (hit.collider.CompareTag("Taburetka"))) {
+            else if (DAYS.DAY2 && (hit.collider.CompareTag("Taburetka")) && !ptica) {
                 Taburetka.GetComponent<AudioSource>().Play();
                 Lightt.SetActive(true);
                 isTraska = true;
-                Invoke("aga", 2f);
+                Invoke("aga", 3f);
+                ptica = true;
+            }
+            else if (DAYS.DAY5 && (hit.collider.CompareTag("Nanometr2")) && !miliShepolochek)
+            {
+                ZvukPtici.Stop();
+                Shepolochek.Play();
+                Lightt.SetActive(true);
+                miliShepolochek = true;
+            }
+            else if ((hit.collider.CompareTag("Taburetka") && miliShepolochek) && !PticaEnd)
+            {
+                ZvukPtici.Play();
+                Shepolochek.Stop();
+                Lightt.SetActive(false);
+                PticaEnd = true;
             }
         }
     }

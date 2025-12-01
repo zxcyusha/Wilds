@@ -121,7 +121,7 @@ public class ItemPicker : MonoBehaviour
 
                 else if (Hit.collider.CompareTag("DoorToCarps"))
                 {
-                    if (DAYS.DAY1 || DAYS.DAY3 || DAYS.DAY5)
+                    if (DAYS.DAY1 || DAYS.DAY3 || DAYS.DAY4 || DAYS.DAY5)
                     {
                         if (isOpen)
                         {

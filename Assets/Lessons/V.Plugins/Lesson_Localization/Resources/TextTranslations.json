@@ -1,0 +1,70 @@
+{
+  "entities": [
+    {
+      "key": "PLAY",
+      "translations": [
+        {
+          "language": "English",
+          "value": "PLAY"
+        },
+        {
+          "language": "Russian",
+          "value": "ИГРАТЬ"
+        }
+      ]
+    },
+
+    {
+      "key": "Press E to take list",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press E to take list"
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на E, чтобы прикрепить листок"
+        }
+      ]
+    },
+    {
+      "key": "SETTINGS",
+      "translations": [
+        {
+          "language": "English",
+          "value": "SETTINGS"
+        },
+        {
+          "language": "Russian",
+          "value": "НАСТРОЙКИ"
+        }
+      ]
+    },
+    {
+      "key": "EXIT",
+      "translations": [
+        {
+          "language": "English",
+          "value": "EXIT"
+        },
+        {
+          "language": "Russian",
+          "value": "ВЫХОД"
+        }
+      ]
+    },
+    {
+      "key": "INFO",
+      "translations": [
+        {
+          "language": "English",
+          "value": "INFO"
+        },
+        {
+          "language": "Russian",
+          "value": "ИНФО"
+        }
+      ]
+    }
+  ]
+}

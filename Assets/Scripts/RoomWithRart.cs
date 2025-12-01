@@ -20,7 +20,7 @@ public class RoomWithRart : MonoBehaviour
     public float speed;
     public static bool telesh = false;
     public bool game = false;
-    private bool katitsa = true;
+    public static bool katitsa = true;
     public Vector3 telPer;
     private AudioSource skip;
     private bool a = true;
