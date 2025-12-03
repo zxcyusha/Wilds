@@ -17,8 +17,8 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   focusDistance:
-    overrideState: 0
-    value: 26.76
+    overrideState: 1
+    value: 50
   aperture:
     overrideState: 1
     value: 32

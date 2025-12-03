@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -47,5 +48,10 @@ public class Pause : MonoBehaviour
     {
         var volum = Mathf.Log10(value) * _multiplier;
         mixer.SetFloat(volumeParameter, volum);
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

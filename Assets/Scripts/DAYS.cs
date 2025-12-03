@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class DAYS : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class DAYS : MonoBehaviour
 
     public GameObject F;
     public GameObject TemneyushiyEkran;
-    public GameObject Diary;
+    public GameObject diary;
     public GameObject DenN;
     public GameObject Door1;
     public GameObject Door2;
@@ -56,16 +57,31 @@ public class DAYS : MonoBehaviour
     public GameObject Peretashit;
     public GameObject button;
     public GameObject textic;
+    public GameObject Diary1;
+    public GameObject Diary2;
+    public GameObject Diary3;
+    public GameObject Diary4;
+    public GameObject Diary5;
+    public GameObject Player;
+    public AudioSource FonShum;
+    public AudioSource NachZvuk;
+    public TextMeshProUGUI Spase;
+    public AudioSource HappyAudio;
+    public GameObject HappyPanel;
+    public static bool NANOMETRS;
+    public static int day;
     public bool CAN1;
     public bool CAN2;
     public bool CAN3;
     public bool CAN4;
+    public bool CAN5;
     private bool EndGame = false;
 
     private bool raspisanieYes = false;
 
     void Start()
     {
+        Time.timeScale = 1f;
         bur.transform.localPosition = new Vector3(-24.07f, -6.67f, -12.93f);
         bur.transform.localRotation = Quaternion.Euler(0, 90, 0);
         DAYFIRST();
@@ -89,6 +105,8 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Diary1.SetActive(true);
+                        RoomWithRart.canDvig = false;
                         RoomWithRart.katitsa = true;
                         Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
                         RoomWithRart.telesh = false;
@@ -110,6 +128,11 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Diary1.SetActive(false);
+                        Diary2.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
                         Stones.poloshili = false;
                         RoomWithRart.telesh = false;
                         DenN.GetComponent<TextMeshProUGUI>().text = "Δενό 3";
@@ -130,6 +153,11 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Diary2.SetActive(false);
+                        Diary3.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
                         Stones.poloshili = false;
                         bur.transform.localPosition = new Vector3(1.09f, -6.67f, -16.04f);
                         RoomWithRart.telesh = false;
@@ -149,6 +177,11 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Diary3.SetActive(false);
+                        Diary4.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
                         Stones.poloshili = false;
                         bur.transform.localPosition = new Vector3(-24.55f, -6.67f, -5.01f);
                         bur.transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -156,12 +189,12 @@ public class DAYS : MonoBehaviour
                         DenN.GetComponent<TextMeshProUGUI>().text = "Δενό 5";
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
-                        ResetFirstRoom();
                         ResetShahta();
                         ResetPtica();
                         ResetTeleshki();
                         firstRoom.RandomZnach();
                         openDoors.CloseAllDoors();
+                        Cart.prikrepiliList = true;
                     }
                 }
 
@@ -170,6 +203,8 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        Diary4.SetActive(false);
+                        Diary5.SetActive(true);
                         EndGame = true;
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
@@ -183,10 +218,16 @@ public class DAYS : MonoBehaviour
             
         }
         else F.SetActive(false);
+
+        if (diary.activeInHierarchy && Input.GetKeyDown(KeyCode.Space))
+        {
+            if ((Diary.d1 == 2 && DAYS.DAY1) || (Diary.d2 == 2 && DAYS.DAY2) || (Diary.d3 == 2 && DAYS.DAY3) || (Diary.d4 == 2 && DAYS.DAY4) || (Diary.d5 == 1 && DAYS.DAY5)) NewDay();
+        }
     }
 
     public void DAYFIRST()
     {
+        day = 1;
         Raspisanie.SetTexture("_MainTex", D1);
         DAY1 = true;
         DAY2 = false;
@@ -197,6 +238,7 @@ public class DAYS : MonoBehaviour
 
     public void DAYSECOND()
     {
+        day = 2;
         DAY1 = false;
         DAY2 = true;
         DAY3 = false;
@@ -210,6 +252,7 @@ public class DAYS : MonoBehaviour
 
     public void DAYTHIRD()
     {
+        day = 3;
         DAY1 = false;
         DAY2 = false;
         DAY3 = true;
@@ -223,6 +266,7 @@ public class DAYS : MonoBehaviour
 
     public void DAYFOURTH()
     {
+        day = 4;
         DAY1 = false;
         DAY2 = false;
         DAY3 = false;
@@ -236,6 +280,7 @@ public class DAYS : MonoBehaviour
 
     public void DAYFIFTH()
     {
+        day = 5;
         DAY1 = false;
         DAY2 = false;
         DAY3 = false;
@@ -251,8 +296,9 @@ public class DAYS : MonoBehaviour
     {
         textic.SetActive(false);
         button.SetActive(true);
-        Diary.SetActive(true);
+        diary.SetActive(true);
         Cursor.visible = true;
+        FonShum.Stop();
     }
 
     public void NewDay()
@@ -273,15 +319,14 @@ public class DAYS : MonoBehaviour
         {
             DAYFIFTH();
         }
-        Diary.GetComponent<Animator>().SetBool("Zakr", false);
-
-        
+        diary.GetComponent<Animator>().SetBool("Zakr", false);
         Invoke("DnevnikClose", 1f);
+        Spase.color = new Color(0, 0, 0, 120);
     }
 
     private void DnevnikClose() {
         if (!EndGame) {
-            Diary.SetActive(false);
+            diary.SetActive(false);
             Door1.GetComponent<Animator>().SetBool("Open", false);
             Door2.GetComponent<Animator>().SetBool("open", false);
             Invoke("ZaKrPanel", 3f);
@@ -290,11 +335,24 @@ public class DAYS : MonoBehaviour
         }
         else
         {
-            Diary.SetActive(false);
-            TemneyushiyEkran.SetActive(false);
-            Cursor.visible = false;
-            Zabludilsa.GetComponent<BadEnd>().enabled = true;
+            Door1.GetComponent<Animator>().SetBool("Open", false);
+            Door2.GetComponent<Animator>().SetBool("open", false);
+            if (Diary.Bad >= 5) {
+                diary.SetActive(false);
+                TemneyushiyEkran.SetActive(false);
+                Cursor.visible = false;
+                Zabludilsa.GetComponent<BadEnd>().enabled = true;
         }
+            else
+            {
+                diary.SetActive(false);
+                TemneyushiyEkran.SetActive(false);
+                Cursor.visible = false;
+                playerCamera.rotation = Quaternion.Euler(0, 0, 0);
+                Player.transform.position = new Vector3(9.152f, 0.167f, -18f);
+                GoodEnd();
+            }
+    }
     }
 
     private void ZaKrPanel()
@@ -310,6 +368,7 @@ public class DAYS : MonoBehaviour
         LiftOtkr.Play();
         TemneyushiyEkran.SetActive(false);
         DenN.SetActive(false);
+        FonShum.Play();
     }
 
     private void DenNStart()
@@ -347,7 +406,6 @@ public class DAYS : MonoBehaviour
     }
     private void ResetTeleshki()
     {
-        Debug.Log(0);
         teleshka.transform.SetParent(Osnkomn.transform);
         teleshka.GetComponent<Animator>().enabled = true;
         teleshka.GetComponent<Animator>().SetBool("Array", false);
@@ -383,4 +441,31 @@ public class DAYS : MonoBehaviour
         halk.SetActive(false);
 
     }
+
+    private void GoodEnd()
+    {
+        playerCamera.GetComponent<CinemachineBrain>().enabled = false;
+        Player.GetComponent<AnimatorCotroller>().enabled = false;
+        playerCamera.position = new Vector3(9.135f, 1.91f, -16.694f);
+        FonShum.Stop();
+        NachZvuk.Play();
+        Invoke("GoodKonec", 5f);
+    }
+
+    private void GoodKonec()
+    {
+        Door1.GetComponent<Animator>().SetBool("Open", true);
+        Door2.GetComponent<Animator>().SetBool("open", true);
+        NachZvuk.Stop();
+        HappyAudio.Play();
+        HappyPanel.SetActive(true);
+        Invoke("cursor", 20f);
+    }
+
+    private void cursor()
+    {
+        Cursor.visible = true;
+    }
+
+    
 }

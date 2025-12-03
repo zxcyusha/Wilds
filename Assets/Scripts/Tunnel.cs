@@ -40,8 +40,6 @@ public class Tunnel : MonoBehaviour
             Begi.SetActive(true);
             StrashniZvuk.Play();
             portalBil = true;
-            ТряскаКамеры.isTraska = true;
-            ТряскаКамеры.strength = 0.02f;
             Panel.SetActive(true);
         }
 
@@ -89,7 +87,6 @@ public class Tunnel : MonoBehaviour
 
     private void end()
     {
-        ТряскаКамеры.isTraska = false;
         StartCoroutine(Ecran(depthOfField));
         isNarkomania = true;
         Invoke("konec", 10f);

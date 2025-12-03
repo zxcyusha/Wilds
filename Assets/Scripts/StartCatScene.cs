@@ -20,6 +20,8 @@ public class StartCatScene : MonoBehaviour
     public AudioSource liftOpen;
     public static bool CanSettings = false;
     public GameObject Instrukcia;
+    public GameObject Translator;
+    public static bool IsAnimated = false;
     private int i = 0;
     private string s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
     private string s2 = "С каждым днём всё труднее придумывать причины оставаться здесь.";
@@ -115,7 +117,8 @@ public class StartCatScene : MonoBehaviour
         Invoke("a", 3f);
     }
     private void END() {
-        
+        IsAnimated = false;
+        Translator.SetActive(false);
         zastavka.SetActive(false);
         door1.SetBool("Open", true);
         door2.SetBool("open", true);

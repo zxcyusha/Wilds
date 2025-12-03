@@ -5,32 +5,18 @@ namespace Lessons.Plugins.Lesson_Localization
 {
     public sealed class LocalizationComponent : MonoBehaviour
     {
-        // [SerializeReference]
-        // private ILanguageListener[] _listeners;
-        
-        [SerializeField]
-        private TextLanguageListener _listener;
+        [SerializeField] private string key;
+        private TextMeshProUGUI text;
 
         private void Awake()
         {
-            _listener.SetText(GetComponent<TextMeshProUGUI>());
+            text = GetComponent<TextMeshProUGUI>();
         }
+
 
         private void OnEnable()
         {
-            UpdateLanguage(LanguageManager.Language);
-            LanguageManager.OnLanguageChanged += UpdateLanguage;
-        }
-
-        private void OnDisable()
-        {
-            LanguageManager.OnLanguageChanged -= UpdateLanguage;            
-        }
-
-        private void UpdateLanguage(SystemLanguage language)
-        {
-            
-            _listener.OnLanguageChanged(language);
+            text.text = LocalizationManager.GetText(key, LanguageManager.Language);
         }
     }
 }

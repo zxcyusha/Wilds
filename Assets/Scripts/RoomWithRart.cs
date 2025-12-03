@@ -28,6 +28,7 @@ public class RoomWithRart : MonoBehaviour
     public static bool OTPRAVILITELESHKI = false; //
     public bool DA = false; // игнор
     public static bool CartYes = false;
+    public static bool canDvig = false;
 
     private void Start()
     {
@@ -50,8 +51,8 @@ public class RoomWithRart : MonoBehaviour
             {
                 if (Hit.collider.CompareTag("Carts") && !OTPRAVILITELESHKI)
                 {
-                    TextTel.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.F))
+                    if (canDvig) TextTel.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F) && canDvig)
                     {
                         playerCamera.transform.rotation = Quaternion.Euler(20f, -180f, 0f);
                         playerCamera.GetComponent<CinemachineBrain>().enabled = false;
@@ -193,11 +194,15 @@ public class RoomWithRart : MonoBehaviour
 
     }
 
-    private void StopZvuk() { Teleshka.GetComponent<AudioSource>().Stop(); }
+    private void StopZvuk() { 
+        Teleshka.GetComponent<AudioSource>().Stop();
+        canDvig = true;
+    }
     private void end()
     {
         if (game)
         {
+            skip.Stop();
             Invoke("stopTel", 3f);
             playerCamera.GetComponent<CinemachineBrain>().enabled = true;
             Player.GetComponent<AnimatorCotroller>().enabled = true;

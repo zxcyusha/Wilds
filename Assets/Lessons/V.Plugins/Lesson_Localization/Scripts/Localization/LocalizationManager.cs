@@ -9,11 +9,9 @@ namespace Lessons.Plugins.Lesson_Localization
         private static LocalizationManager instance;
 
         [FormerlySerializedAs("textConfig")]
-        [SerializeField]
-        private TextStorage textStorage;
+        [SerializeField] private TextStorage textStorage;
 
         private ITranslator<string> textTranslator;
-
 
         private void Awake()
         {
@@ -48,16 +46,6 @@ namespace Lessons.Plugins.Lesson_Localization
             }
 
             return key;
-        }
-
-        public static Sprite GetSprite(string key, SystemLanguage language)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static AudioClip GetAudio(string key, SystemLanguage language)
-        {
-            throw new NotImplementedException();            
         }
     }
 }

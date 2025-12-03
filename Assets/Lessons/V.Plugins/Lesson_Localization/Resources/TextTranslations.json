@@ -1,68 +1,1199 @@
 {
   "entities": [
     {
-      "key": "PLAY",
+      "key": "Attach",
       "translations": [
         {
           "language": "English",
-          "value": "PLAY"
+          "value": "Press E to attach a sheet"
         },
         {
           "language": "Russian",
-          "value": "ИГРАТЬ"
+          "value": "Нажми на E, чтобы прикрепить лист"
         }
       ]
     },
 
     {
-      "key": "Press E to take list",
+      "key": "ER",
       "translations": [
         {
           "language": "English",
-          "value": "Press E to take list"
+          "value": "E - take; R - write"
         },
         {
           "language": "Russian",
-          "value": "Нажми на E, чтобы прикрепить листок"
+          "value": "E - взять; R - писать"
         }
       ]
     },
     {
-      "key": "SETTINGS",
+      "key": "DiaryOpen",
       "translations": [
         {
           "language": "English",
-          "value": "SETTINGS"
+          "value": "Press F to open the diary"
         },
         {
           "language": "Russian",
-          "value": "НАСТРОЙКИ"
+          "value": "Нажми на  F, чтобы открыть дневник"
         }
       ]
     },
     {
-      "key": "EXIT",
+      "key": "IToReturn",
       "translations": [
         {
           "language": "English",
-          "value": "EXIT"
+          "value": "Click on I to return"
         },
         {
           "language": "Russian",
-          "value": "ВЫХОД"
+          "value": "Нажми на I чтобы вернуться"
         }
       ]
     },
     {
-      "key": "INFO",
+      "key": "Language",
       "translations": [
         {
           "language": "English",
-          "value": "INFO"
+          "value": "Language"
         },
         {
           "language": "Russian",
-          "value": "ИНФО"
+          "value": "Язык"
+        }
+      ]
+    },
+    {
+      "key": "Pause",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Pause"
+        },
+        {
+          "language": "Russian",
+          "value": "Пауза"
+        }
+      ]
+    },
+    {
+      "key": "Settings",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Settings"
+        },
+        {
+          "language": "Russian",
+          "value": "Настройки"
+        }
+      ]
+    },
+    {
+      "key": "Sensitivity",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Mouse sensitivity"
+        },
+        {
+          "language": "Russian",
+          "value": "Чувствительность мыши"
+        }
+      ]
+    },
+    {
+      "key": "Paranormal",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I think it's paranormal... something scary and beyond human control is somewhere near me. I don't know what it wants or what its goals are, but I can see a calm, reproachful gaze in every dark corner."
+        },
+        {
+          "language": "Russian",
+          "value": "Мне кажется, это паронормальщина… что-то страшное и неподвластное человеку где-то рядом со мной. Я не знаю, что Ему нужно и какие цели Оно преследует, но в каждом темном углу мне мерещится чей-то спокойный, укоряющий взгляд. "
+        }
+      ]
+    },
+    {
+      "key": "Stress",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I think the fatigue and stress have taken their toll on my mind. I think these oddities are a product of my imagination, which has been poisoned by dust and filth. I've read about this kind of stress-related reaction. In any case, the past few days have been the most difficult of my life."
+        },
+        {
+          "language": "Russian",
+          "value": "Наверное, усталость и напряжение сыграли свою роль, и моя психика стала сдавать. Думаю, эти странности - плод моего, отравленного пылью и грязью, воображения. Я что-то читал о такой реакции организма на стресс. В любом случае, последние дни были самыми тяжелыми в моей жизни"
+        }
+      ]
+    },
+    {
+      "key": "Strange",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Today, something very strange happened that almost caused me to have a panic attack. While walking through one of the tunnels, I realized that I couldn't reach the end of it. The small passage turned into an endless maze with no way out. The walls seemed to narrow, trapping me in a dead end."
+        },
+        {
+          "language": "Russian",
+          "value": "Ещё сегодня случилось нечто очень странное и чуть не доведшее меня до панической атаки. При переходе через один из туннелей, я осознал, что не могу прийти к его концу. Небольшой переход оказался бесконечным лабиринтом без выхода. Своды будто сужались, загоняя меня в тупик."
+        }
+      ]
+    },
+    {
+      "key": "Mine",
+      "translations": [
+        {
+          "language": "English",
+          "value": "This morning I learned information about the collapse of the neighboring mine «Hope». I knew a couple of guys from there... I don't even want to think about where they are and what's happening to them now. Now the overwhelming feeling is not devastation, but fear. Endless, overflowing me every minute that I'm underground. I've thought about the collapses before, but when it happens so close to you... The most gnawing me in this situation is my powerlessness. I can't be sure that the mine is safe, but I can't avoid going to work."
+        },
+        {
+          "language": "Russian",
+          "value": "Сегодня с утра узнал информацию об обвале соседней шахты «Надежда». Я знал пару ребят оттуда… даже думать не хочу где они и что с ними сейчас. Сейчас приволируещим чувством стало не опустошение, а страх. Бесконечный, переполняющим меня каждую минуту, что я нахожусь под землёй. Я и раньше думал о завалах, но когда он произошло так близко от тебя… Самое гложущее меня в этой ситуации — моё бессилие. Я не могу быть уверенным в сохранности шахты, но и не выйти на работу я не могу."
+        }
+      ]
+    },
+    {
+      "key": "Humanity",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Maybe humanity doesn't know enough. We don't know what sank hundreds of ships in the Bermuda Triangle, but we do know what lies deep beneath the earth. We haven't explored even a quarter of our planet's subterranean regions... What if there are Gods playing with me and my emotions? Okay, I'm probably just tired and starting to ramble."
+        },
+        {
+          "language": "Russian",
+          "value": "Может, человечество и правда знает недостаточно много. Мы не знаем, что потопило сотни кораблей в бермудском треугольнике, но знаем, что скрывается глубоко под землей? Мы ведь и четверти всех недр нашей планеты не исследовали… Вдруг этим местом заправляют свои Боги, играющиеся со мной и моими чувствами? Ладно, думаю я просто устал и начинаю нести бред. "
+        }
+      ]
+    },
+    {
+      "key": "Explanation",
+      "translations": [
+        {
+          "language": "English",
+          "value": "There must be a logical explanation for all this. Distorted perspective, poor lighting, fog, and most importantly, my general state of fear, which torments and exhausts me. I don't want to think about it. I'll just forget."
+        },
+        {
+          "language": "Russian",
+          "value": "Наверное, этому всему есть логичное объяснение. Искажение перспективы, плохое освещение, туман, а главное — моё общее состояние страха, изводящего и истощающего меня. Не хочу об этом вспоминать. Просто забуду."
+        }
+      ]
+    },
+    {
+      "key": "Place",
+      "translations": [
+        {
+          "language": "English",
+          "value": "This place has a toxic effect on me. It destroys everything that is innate in a person. My problems are his fault."
+        },
+        {
+          "language": "Russian",
+          "value": "Это место оказывает на меня отравляющее влияние. Изживает все, что есть в человеке от рождения. Мои проблемы — его вина."
+        }
+      ]
+    },
+    {
+      "key": "Returned",
+      "translations": [
+        {
+          "language": "English",
+          "value": "So, I've returned to the mine, and I've decided to continue writing this diary. A website on the internet told me that it would help me cope with my emotions. And I have a lot of emotions... I just returned from a break, but I still feel tired, apathetic, and disliked for this place. I know that I need money to pay off my debts and so on... but my life is becoming less meaningful with each passing day."
+        },
+        {
+          "language": "Russian",
+          "value": "Итак, я снова вернулся в шахту, а потому решил продолжить вести этот дневник. Какой-то сайт в интернете сказал, что это должно помочь мне справиться с переживаниями. А у меня их приличное количество... Только вернулся с межвахты, но всё так же чувствую усталость, апатию, неприязнь к этому месту. Я понимаю, что мне нужны деньги для покрытия долгов и прочее...но, с каждым днем моя жизнь всё больше теряет смысл."
+        }
+      ]
+    },
+    {
+      "key": "Complete",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I think I'll try to complete all the tasks as quickly as possible tomorrow and get out of here as soon as possible, even if I get a penalty. I can't stand the fear that this place brings me anymore."
+        },
+        {
+          "language": "Russian",
+          "value": "Думаю, завтра я постараюсь выполнить все задачи как можно быстрее и поскорее уйти отсюда, пусть я могу получить штраф. Я больше не могу терпеть страх, который приносит мне это место."
+        }
+      ]
+    },
+    {
+      "key": "Probably",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I could probably do an unscheduled, extra check of the rock strength outside of working hours. Yes, it would take extra time, but it might improve my morale."
+        },
+        {
+          "language": "Russian",
+          "value": "Пожалуй, я мог бы сделать в нерабочее время внеплановую, дополнительную проверку прочности породы. Да, это займет лишнее время, но может улучшит мое моральное состояние."
+        }
+      ]
+    },
+    {
+      "key": "Birdie",
+      "translations": [
+        {
+          "language": "English",
+          "value": "My birdie seems to be going crazy too. I generally consider it to be animal cruelty to use living creatures to control the air, because I'm sure modern technology would do a better job. It's probably because of these thoughts that I'm down here working long shifts, while my boss is upstairs sipping coffee."
+        },
+        {
+          "language": "Russian",
+          "value": "Моя птичка видимо тоже стала сходить с ума. Я в целом считаю живодерством использование живых существ для контроля воздуха ведь, уверен, современные технологии справлялись бы лучше. Видимо из-за таких мыслей я здесь, внизу, работаю многочасовые смены, а начальник - наверху попивает кофеёк."
+        }
+      ]
+    },
+    {
+      "key": "Two",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Two days have passed. Two tedious, routine days. It seems to me that all life passes by, somewhere there, above, while I am here... in the bowels.... I can't find the right solution. On the one hand, the thoughts of wasting the best years of life in the mine, of the constant feeling of being cut off from life, oppress me and make me depressed. On the other hand, I understand that this is the only way out and every person in my position must work, I must work, earn money, for who am I otherwise? My future worries me. What will it be like?"
+        },
+        {
+          "language": "Russian",
+          "value": "Вот прошло два дня. Два утомительных, рутинных дня. Мне кажется, вся жизнь проходит мимо, где-то там, наверху, пока я здесь… в недрах…. Я не могу найти правильного решения. С одной стороны, мысли о растрате лучших лет жизни в шахте, о постоянном чувстве оторванности от жизни угнетают меня и вгоняют в тоску. С другой, я пониманию, что это единственный выход и каждый человек в моем положении должен работать, я обязан трудиться, зарабатывать деньги, ведь кто я иначе? Моё будущее тревожит меня. Каким оно будет?"
+        }
+      ]
+    },
+    {
+      "key": "Freezes",
+      "translations": [
+        {
+          "language": "English",
+          "value": "It freezes everything: the boss with strict rules, the crazed bird. I know that aggression is bad, but why the hell should I be so stressed out... my hands are falling off."
+        },
+        {
+          "language": "Russian",
+          "value": "Вымораживает все: начальство со строгими правилами, обезумевшая птица. Знаю, что агрессия это плохо, но какого черта я должен так изводиться… у меня опускаются руки."
+        }
+      ]
+    },
+    {
+      "key": "Canary",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The canary scares me with its sudden cries, and I have to remind myself more often that it's just a bird. I'm not the main character in some horror movie, and it's just a tiny creature destined to suffer."
+        },
+        {
+          "language": "Russian",
+          "value": "Канарейка пугает меня неожиданными криками, и мне приходится чаще себе напоминать, что это просто птица. Я не главный герой какого-то хоррора, а она — просто такое же крохотное создание, обреченное на страдания."
+        }
+      ]
+    },
+    {
+      "key": "Although",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Although there are enough oddities in today's day. Periodically, my heart started beating wildly, my body trembled, and I had problems with my vision."
+        },
+        {
+          "language": "Russian",
+          "value": "Хотя странностей хватает и в сегодняшнем дне. Периодически начало бешено биться сердце, дрожь по телу, проблемы со зрением."
+        }
+      ]
+    },
+    {
+      "key": "Idontwant",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I don't want to think, I don't want to act... I'm tired of everything, and I just want to rest. I go to the dorm, I sleep, and then I go back to the mine. Maybe I should spend more time sleeping, and then I'll feel better. I think I should try that."
+        },
+        {
+          "language": "Russian",
+          "value": "Не хочу думать, действовать… я устал от всего и просто хочу отдохнуть. Я прихожу в общежитие, сплю и направляюсь обратно в шахту. Может мне стоит больше времени уделять сну и тогда мне станет легче? Думаю, стоит попробовать."
+        }
+      ]
+    },
+    {
+      "key": "Guess",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I guess I need to force myself to make friends with my dorm mates. However, I don't really want to do that... when I come back from work, all I want to do is watch a stupid TV show and nothing else. I don't feel comfortable around a lot of people. But I guess I should push myself to try and make my life less meaningless and lonely."
+        },
+        {
+          "language": "Russian",
+          "value": "Наверное мне необходимо пересилить себя и завести знакомства с соседями по общежитию. Однако мне так этого не хочется… приходя со смены я желаю лишь пялиться в глупое шоу по телеку и больше ничего. Мне не комфортно в большом количестве людей. Но всё же, наверное, я должен переступить через себя и попробовать, чтобы сделать свою жизнь не такой бессмысленной, одинокой."
+        }
+      ]
+    },
+    {
+      "key": "Dream",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I think it's because what I'm seeing is like a dream. But like in any dream, you don't realize it's unreal until the end. And now, my mind can't tell the difference between fiction and reality... I'm trying to repeat these thoughts to block out the growing anxiety and protect myself, like a priest with a cross surrounded by devils in hell. But they're getting closer, bigger."
+        },
+        {
+          "language": "Russian",
+          "value": "Мне кажется, так случилось потому ,что то, что я вижу похоже на сон. Но как в любом сне, ты не осознаешь его нереальности до самого конца. Вот и сейчас мой мозг не понимает где вымысел, а где реальность… я стараюсь повторять эти мысли, чтобы отгородиться от вновь нарастающей тревоги и защищаться ими, подобно священнику с крестом в окружении дьяволов в преисподней. Но они все ближе, больше. "
+        }
+      ]
+    },
+    {
+      "key": "Menu",
+      "translations": [
+        {
+          "language": "English",
+          "value": "В главное меню"
+        },
+        {
+          "language": "Russian",
+          "value": "To the main menu"
+        }
+      ]
+    },
+    {
+      "key": "Sounds",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I'm hearing strange sounds more and more often... it's like something is following me, keeping me from relaxing. Sometimes I have visions. Scary visions. I don't know what to do about it."
+        },
+        {
+          "language": "Russian",
+          "value": "Я всё чаще слышу странные звуки… как будто что-то преследует меня, не даёт расслабиться. Иногда появляются видения. Пугающие видения. Я не знаю, что с этим делать."
+        }
+      ]
+    },
+    {
+      "key": "Here",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Why am I here?"
+        },
+        {
+          "language": "Russian",
+          "value": "Почему я здесь?"
+        }
+      ]
+    },
+    {
+      "key": "DriftSystem",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The drift system"
+        },
+        {
+          "language": "Russian",
+          "value": "Система штреков"
+        }
+      ]
+    },
+    {
+      "key": "Back",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Back"
+        },
+        {
+          "language": "Russian",
+          "value": "Назад"
+        }
+      ]
+    },
+    {
+      "key": "Cancel",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Cancel"
+        },
+        {
+          "language": "Russian",
+          "value": "Отмена"
+        }
+      ]
+    },
+    {
+      "key": "Quit",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Quit"
+        },
+        {
+          "language": "Russian",
+          "value": "Выйти"
+        }
+      ]
+    },
+    {
+      "key": "Progress",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Are you sure you want to exit? Your progress will be saved."
+        },
+        {
+          "language": "Russian",
+          "value": "Вы уверены, что хотите выйти? Прогресс будет сохранён."
+        }
+      ]
+    },
+    {
+      "key": "MainMeny",
+      "translations": [
+        {
+          "language": "English",
+          "value": "To the main menu"
+        },
+        {
+          "language": "Russian",
+          "value": "В главное меню"
+        }
+      ]
+    },
+    {
+      "key": "Continue",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Continue"
+        },
+        {
+          "language": "Russian",
+          "value": "Продолжить"
+        }
+      ]
+    },
+    {
+      "key": "Sun",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I feel the sun warming my skin. The spring air clears my mind. Now I understand clearly: I will not go down again. I will not return to the depths."
+        },
+        {
+          "language": "Russian",
+          "value": "Я чувствую, как солнце согревает мою кожу. Весенний воздух очищает разум. Теперь я ясно понимаю: больше не спущусь вниз. Больше не вернусь в недра."
+        }
+      ]
+    },
+    {
+      "key": "Visions",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The visions are getting stronger with each passing hour. I can't think in long sentences. The buzzing and voices in my head are distracting. It took me about 20 minutes to write these lines. Maybe longer. I've lost track of time. She's calling me. The darkness. The emptiness."
+        },
+        {
+          "language": "Russian",
+          "value": "Видения усиливаются с каждым часом. Я не способен мыслить длинными предложениями. Гул и голоса в голове отвлекают. Даже эти строчки я старался сформулировать около 20-ти минут. Может больше. Я перестал ощущать время. Она зовет меня. Тьма. Пустота..."
+        }
+      ]
+    },
+    {
+      "key": "Resisting",
+      "translations": [
+        {
+          "language": "English",
+          "value": "All my suffering is because I'm resisting. But She's calling out and waiting. A couple of months ago, I would have considered such thoughts insane, but how can you prove otherwise? Who are you, and who am I? Why is it that the idea of our life's pursuit of emptiness is foreign to you, but the idea of a meaningless pursuit of money is familiar? I urge anyone who reads this diary to reflect on the purpose of their own existence. I believe I have found the answer."
+        },
+        {
+          "language": "Russian",
+          "value": "Все мои мучения оттого, что я сопротивляюсь. Но Она взывает и ждет. Ещё пару месяцев назад я счел бы такие мысли безумием, но как ты докажешь, что это не так? Кто ты и кто я? Почему идея стремления нашей жизни к пустоте тебе непонятна, но идея бессмысленного стремления заработать деньги привычна? Я призываю каждого, кто прочтет этот дневник задуматься: зачем ты живешь. Думаю, я нашел ответ."
+        }
+      ]
+    },
+    {
+      "key": "Anxiety",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Anxiety and numerous thoughts have taken on a voice in my head that I can't control. All I want is to escape. I want silence. I almost crawl to the elevator and pray to all the gods that the cold, fresh air will help clear my mind. I want to call my mother. What happens next? I don't know."
+        },
+        {
+          "language": "Russian",
+          "value": "Тревожность и многочисленные мысли обрели в моей голове голос, не подконтрольный мне самому. Всё, чего я хочу — сбежать. Хочу тишины. Практически ползком добираюсь до лифта и молюсь всем богам, чтобы холодный свежий воздух, помог мне очистить разум. Я хочу позвонить матери. Что потом? Не знаю."
+        }
+      ]
+    },
+    {
+      "key": "Fear",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The fear of the mine collapse has passed, and today I am writing these lines with unshaking hands. However, this calmness is somehow hysterical and fake, as paradoxical as it may sound. I feel like a pilot who knows that their plane will crash, but is unable to do anything about it, just watching the rapid descent. Today, I saw a creature. I don't know how to describe its appearance in words. It was looking at me, or perhaps through me, or perhaps into my very soul. However, the fear that had instantly gripped my entire body subsided just as quickly."
+        },
+        {
+          "language": "Russian",
+          "value": "Страх обвала шахты прошел, и сегодня я пишу эти строчки руками без дрожи. Однако и это спокойствие какое-то истерическое, поддельное, как бы парадоксально это не звучало. Я чувствую себя пилотом, знающим, что его самолет разобьётся, но не способным ничего исправить, просто наблюдающим за стремительным снижением. Сегодня я видел существо. Не знаю, как описать словами его внешний вид. Оно смотрело на меня, а может сквозь, а может в самую мою душу. Однако страх, мгновенно овладевший всем моим телом так же быстро спал."
+        }
+      ]
+    },
+    {
+      "key": "Eyes",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The creature's eyes were not terrifying. They were calm and observant. It knew something about me. In any case, I am certain that it is real and not a figment of my imagination. I have seen it with my own eyes. I am not going mad—no, I am touching something that was previously hidden from humans. Or perhaps it is touching me."
+        },
+        {
+          "language": "Russian",
+          "value": "Глаза существа не внушали ужаса. Они были спокойными, наблюдающими. Оно что-то знает обо мне. В любом случае, я уверен, что оно реально и это не плод моего воображения. Я точно видел его. И я не схожу с ума — нет — я прикасаюсь к тому, что раньше было скрыто от людей. Или же оно прикасается ко мне. "
+        }
+      ]
+    },
+    {
+      "key": "Okay",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Okay, I think it will all go away, I just need to be strong and not worry about nothing. I have to work... Excessive questions and doubts only create more uncertainty about tomorrow."
+        },
+        {
+          "language": "Russian",
+          "value": "Ладно, думаю, это всё пройдет, нужно просто быть сильным и не заморачиваться по пустякам. Я должен работать...Лишние вопросы и сомнения только создают больше неуверенности в завтрашнем дне."
+        }
+      ]
+    },
+    {
+      "key": "Maybe",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Maybe my body needs time to adapt to the new conditions, and that's why it's giving me these problems. Although I know in my heart that this theory is unlikely, I want to believe it."
+        },
+        {
+          "language": "Russian",
+          "value": "Может моему организму нужно время, чтобы адаптироваться к новым условиям и потому сейчас он даёт такие сбои...хотя в душе я понимаю, что эта версия неправдоподобна, хочу ей верить."
+        }
+      ]
+    },
+    {
+      "key": "Rtoreturn",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press R to return"
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на R чтобы вернуться"
+        }
+      ]
+    },
+    {
+      "key": "Putting",
+      "translations": [
+        {
+          "language": "English",
+          "value": "This place is putting a lot of pressure on me (maybe it's the lack of oxygen or something), and the only way I can see to get out of this situation is to quit my job as soon as possible. In a couple of months, I'll be out of here, and I don't really care where I go. It's for the best."
+        },
+        {
+          "language": "Russian",
+          "value": "Это место давит на меня (может сказывается недостаток кислорода или ещё что) и единственный выход, который я вижу, в данной ситуации — поскорей прекращать работу. Ещё пару месяцев и точно свалю отсюда, неважно куда. Так будет лучше."
+        }
+      ]
+    },
+    {
+      "key": "Darkness",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The darkness took me in, calmed the voices in my head. Now I feel no anxiety or fatigue, I feel nothing. Now there's just me and the depths."
+        },
+        {
+          "language": "Russian",
+          "value": "Тьма приютила меня, успокоила голоса в голове. Теперь я не чувствую тревоги и усталости, не чувствую ничего. Теперь только я и недра."
+        }
+      ]
+    },
+    {
+      "key": "Instructions",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Instructions for this room"
+        },
+        {
+          "language": "Russian",
+          "value": "Инструкция к этой комнате"
+        }
+      ]
+    },
+    {
+      "key": "Room",
+      "translations": [
+        {
+          "language": "English",
+          "value": "In this room, your task is to examine the rock that was produced by the machine in the mine. To measure the moisture content, magnetic susceptibility, and density of the rock, take a portion of the rock from the large pile and place it on a tray on the table, and then use the instruments to measure it. To measure the hardness and particle size distribution of the rock, place it in the appropriate devices. There are hints on the walls with scales for converting the results. Write the values on a report sheet, and then take it and attach it to the cart."
+        },
+        {
+          "language": "Russian",
+          "value": "В этой комнате твоя задача исследовать породу, полученную в результате работы машины в шахте. Чтобы измерить влажность, магнитную восприимчивость и плотность породы, возьми часть породы из большой кучи и положи на поднос на столе, а дальше измерь специальными приборами. Чтобы измерить твёрдость и гранулометрический состав, положи породу в предназначенные для этого устройства. На стенах висят подсказки со шкалами перевода полученных результатов. Внеси значения в листок для отчёта, а после возьми его и прикрепи к тележке."
+        }
+      ]
+    },
+    {
+      "key": "Thedepths",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The depths"
+        },
+        {
+          "language": "Russian",
+          "value": "Недра"
+        }
+      ]
+    },
+    {
+      "key": "Space",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press the spacebar to select the desired value"
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на пробел, чтобы выбрать нужное значение"
+        }
+      ]
+    },
+    {
+      "key": "Drill",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Several hours have passed since the drill machine started working."
+        },
+        {
+          "language": "Russian",
+          "value": "Прошло несколько часов работы бур-машины."
+        }
+      ]
+    },
+    {
+      "key": "Ore",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Instructions for mining ore"
+        },
+        {
+          "language": "Russian",
+          "value": "Инструкция по добыванию руды"
+        }
+      ]
+    },
+    {
+      "key": "Instruction",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Instruction"
+        },
+        {
+          "language": "Russian",
+          "value": "Инструкция"
+        }
+      ]
+    },
+    {
+      "key": "Anything",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I don't want anything."
+        },
+        {
+          "language": "Russian",
+          "value": "Я ничего не хочу"
+        }
+      ]
+    },
+    {
+      "key": "Every",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Every game day, your tasks will be posted here. Complete them in the order they are given. Once completed, approach the elevator and end the day."
+        },
+        {
+          "language": "Russian",
+          "value": "Каждый игровой день здесь будут висеть твои задачи. Выполняй их в той последовательности, в которой они даны. После завершения подойди к лифту и закончи день."
+        }
+      ]
+    },
+    {
+      "key": "Bunker",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Mountain Bunker"
+        },
+        {
+          "language": "Russian",
+          "value": "Горный бункер"
+        }
+      ]
+    },
+    {
+      "key": "Thank you",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Thank you for completing the game! The project was completed by the Ponkravt team in 2025."
+        },
+        {
+          "language": "Russian",
+          "value": "Спасибо за прохождение игры! Проект выполняла команда «Понкравт» в 2025 году. "
+        }
+      ]
+    },
+    {
+      "key": "Outcome",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Maybe this is a good outcome?"
+        },
+        {
+          "language": "Russian",
+          "value": "Быть может, это и есть хороший исход?"
+        }
+      ]
+    },
+    {
+      "key": "Canaries",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Canaries are used in mines to detect dangerous gases, as they are sensitive to odors. They help to quickly and accurately determine the presence of hazardous substances in the air of the mine workings. In this room, your task is to adjust the proportion of gases supplied to the canary from different air channels. This will help you ensure your safety. Turn the three taps in the room to the green mark. If you don't do this, the canary will die, and a new one will be placed in its place the next day, as the mine cannot function without this bird. However, this will worsen your emotional state."
+        },
+        {
+          "language": "Russian",
+          "value": "Канарейки используются в шахтах для обнаружения опасных газов, так как они чувствительны к запахам. Они помогают быстро и безошибочно определить содержание опасных веществ в воздухе выработок. В этой комнате твоя задача - настраивать пропорцию, подаваемых канарейке газов из разных воздушных каналов. Это поможет тебе гарантировать свою безопастность. Подкрути 3 крана в комнате до зелёной отметки. Если ты не сделаешь этого, то канарейка умрёт, а на следующий день на её место посадят новую, так как без этой птицы в шахте обходиться нельзя, однако это ухудшит твоё эмоциональное состояние."
+        }
+      ]
+    },
+    {
+      "key": "First",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The first thing you need to do is set the power of the drill machine. The power formula is A/t, so in the daily task sheet, take the amount of ore you're mining and divide it by the time it takes to mine. This will give you the required power. You'll need to approach the drill machine and mark it with an arrow. Next, you'll need to select the direction of the machine's movement, and the coordinates are provided in the daily task list. Use your mouse to select the desired coordinates (with an accuracy of up to ten)."
+        },
+        {
+          "language": "Russian",
+          "value": "Первое, что тебе нужно - выставить мощность бур-машины. Формула мощности равна A/t, поэтому в листе с заданием на день возьми количество добываемой руды и раздели это значение на время добывания. Это и будет нужная мощность. Тебе нужно будет подойти к бур-машине и отметить её стрелочкой. Дальше нужно выбрать направление движения машины, координаты даны в списке задач на день. Выбери нужные координаты, двигая мышкой (допускается погрешность до десяти)."
+        }
+      ]
+    },
+    {
+      "key": "Tired",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I'm so tired."
+        },
+        {
+          "language": "Russian",
+          "value": "я так устал"
+        }
+      ]
+    },
+    {
+      "key": "Centre",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Centre"
+        },
+        {
+          "language": "Russian",
+          "value": "Центр"
+        }
+      ]
+    },
+    {
+      "key": "Сareer",
+      "translations": [
+        {
+          "language": "English",
+          "value": "A great career"
+        },
+        {
+          "language": "Russian",
+          "value": "Большой карьер"
+        }
+      ]
+    },
+    {
+      "key": "Next",
+      "translations": [
+        {
+          "language": "English",
+          "value": "What will happen next?"
+        },
+        {
+          "language": "Russian",
+          "value": "Что будет дальше?"
+        }
+      ]
+    },
+    {
+      "key": "Hate",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I hate this place."
+        },
+        {
+          "language": "Russian",
+          "value": "Я ненавижу это место"
+        }
+      ]
+    },
+    {
+      "key": "Lonely",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I'm lonely."
+        },
+        {
+          "language": "Russian",
+          "value": "Я одинок"
+        }
+      ]
+    },
+    {
+      "key": "Bad",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I feel bad"
+        },
+        {
+          "language": "Russian",
+          "value": "Мне плохо"
+        }
+      ]
+    },
+    {
+      "key": "Live",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Why do I live?"
+        },
+        {
+          "language": "Russian",
+          "value": "Зачем я живу?"
+        }
+      ]
+    },
+    {
+      "key": "HELPME",
+      "translations": [
+        {
+          "language": "English",
+          "value": "HELP ME"
+        },
+        {
+          "language": "Russian",
+          "value": "ПОМОГИТЕ МНЕ"
+        }
+      ]
+    },
+    {
+      "key": "Volume",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Volume"
+        },
+        {
+          "language": "Russian",
+          "value": "Громкость"
+        }
+      ]
+    },
+    {
+      "key": "RUN",
+      "translations": [
+        {
+          "language": "RUN",
+          "value": "Continue"
+        },
+        {
+          "language": "Russian",
+          "value": "БЕГИ"
+        }
+      ]
+    },
+    {
+      "key": "Machine",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press F to get into the drill machine."
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на F, чтобы сесть в бур-машину."
+        }
+      ]
+    },
+    {
+      "key": "Humidity",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Measure humidity E - take"
+        },
+        {
+          "language": "Russian",
+          "value": "Измерить влажность Е - взять"
+        }
+      ]
+    },
+    {
+      "key": "Magnetic",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Measure the magnetic susceptibility E - take"
+        },
+        {
+          "language": "Russian",
+          "value": "Измерить магнитную восприимчивость Е - взять"
+        }
+      ]
+    },
+    {
+      "key": "Day2",
+      "translations": [
+        {
+          "language": "English",
+          "value": "day 2"
+        },
+        {
+          "language": "Russian",
+          "value": "день 2"
+        }
+      ]
+    },
+    {
+      "key": "Day1",
+      "translations": [
+        {
+          "language": "English",
+          "value": "day 1"
+        },
+        {
+          "language": "Russian",
+          "value": "день 1"
+        }
+      ]
+    },
+    {
+      "key": "Dear diary",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Dear diary..."
+        },
+        {
+          "language": "Russian",
+          "value": "Дорогой дневник..."
+        }
+      ]
+    },
+    {
+      "key": "EndDay",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press F to end the day."
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на F, чтобы закончить день. "
+        }
+      ]
+    },
+    {
+      "key": "Closed",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Closed."
+        },
+        {
+          "language": "Russian",
+          "value": "Закрыто."
+        }
+      ]
+    },
+    {
+      "key": "Move",
+      "translations": [
+        {
+          "language": "English",
+          "value": "To move, press ASDW + Space."
+        },
+        {
+          "language": "Russian",
+          "value": "Чтобы передвигаться, нажимай на ASDW + Space."
+        }
+      ]
+    },
+    {
+      "key": "Forward",
+      "translations": [
+        {
+          "language": "English",
+          "value": "W - forward, S - backward, A - left, D - right, Q - up, E - down, I - exit"
+        },
+        {
+          "language": "Russian",
+          "value": "день 1"
+        }
+      ]
+    },
+    {
+      "key": "Click",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Click the left mouse button to select a coordinate."
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на левую кнопку мыши, чтобы выбрать координату."
+        }
+      ]
+    },
+    {
+      "key": "NextDay",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press the space bar to start the next day"
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на пробел чтобы начать следующий день"
+        }
+      ]
+    },
+    {
+      "key": "CorrectMine",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press F to send the cart to the correct mine."
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на F, чтобы отправить тележку в нужную шахту."
+        }
+      ]
+    },
+    {
+      "key": "Density",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Measure the density E - take"
+        },
+        {
+          "language": "Russian",
+          "value": "Измерить плотность Е - взять"
+        }
+      ]
+    },
+    {
+      "key": "AttachAbreed",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Attach a breed report sheet to send the cart"
+        },
+        {
+          "language": "Russian",
+          "value": "Прикрепи лист с отчётом о породе, чтобы отправить тележку"
+        }
+      ]
+    },
+    {
+      "key": "Stone",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Put a stone to measure the particle size distribution"
+        },
+        {
+          "language": "Russian",
+          "value": "Положи камень, чтобы измерить гранулометрический состав"
+        }
+      ]
+    },
+    {
+      "key": "MeasurHhardness",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Put down a stone to measure the hardness"
+        },
+        {
+          "language": "Russian",
+          "value": "Положи камень, чтобы измерить твёрдость"
+        }
+      ]
+    },
+    {
+      "key": "BigPile",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Take the breed from the big pile and fill the cart"
+        },
+        {
+          "language": "Russian",
+          "value": "Возьми породу из большой кучи и наполни тележку"
+        }
+      ]
+    },
+    {
+      "key": "Push",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Push the cart to send it."
+        },
+        {
+          "language": "Russian",
+          "value": "Толкни тележку, чтобы отправить её."
+        }
+      ]
+    },
+    {
+      "key": "SelectPower",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Press F to select the power for the drill machine."
+        },
+        {
+          "language": "Russian",
+          "value": "Нажми на F, чтобы выбрать мощность для бур-машины."
         }
       ]
     }

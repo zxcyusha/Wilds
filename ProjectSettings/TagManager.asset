@@ -38,6 +38,10 @@ TagManager:
   - Taburetka
   - Portal
   - Diary
+  - Good
+  - Bad
+  - Good1
+  - Bad1
   layers:
   - Default
   - TransparentFX

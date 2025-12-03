@@ -6,16 +6,14 @@ namespace Lessons.Plugins.Lesson_Localization
     public sealed class LanguageManager : MonoBehaviour
     {
         public static event Action<SystemLanguage> OnLanguageChanged;
-
+        private static LanguageManager instance;
+        private SystemLanguage language;
         public static SystemLanguage Language
         {
             get { return GetLanguage(); }
             set { SetLanguage(value); }
         }
 
-        private static LanguageManager instance;
-
-        private SystemLanguage language;
 
         private void Awake()
         {
@@ -55,13 +53,5 @@ namespace Lessons.Plugins.Lesson_Localization
             return default;
         }
 
-#if UNITY_EDITOR
-        private void SetLanguageInEditor(SystemLanguage value)
-        {
-            Debug.Log($"Language changed {value}");
-            language = value;
-            OnLanguageChanged?.Invoke(value);
-        }
-#endif
     }
 }
