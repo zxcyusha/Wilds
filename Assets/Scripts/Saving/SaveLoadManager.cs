@@ -36,7 +36,6 @@ public class SaveLoadManager : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
 
         Vector3 pos = player.transform.position;
-        Debug.Log(pos);
 
         data.player.position = new float[] {pos.x, pos.y, pos.z};
         data.day.currentDay = DAYS.day;
@@ -73,12 +72,11 @@ public class SaveLoadManager : MonoBehaviour
         File.WriteAllText(SavePath, json);
         Debug.Log("Сохранено в файл: " + SavePath);
 
-        data.values.Language = LanguageManager.Language;
+        //data.values.Language = LanguageManager.Language;
     }
 
     public void LoadAll()
     {
-        Debug.Log(SavePath);
         if (!File.Exists(SavePath))
         {
             Debug.Log("Не существует такого файла");
@@ -107,7 +105,7 @@ public class SaveLoadManager : MonoBehaviour
         LoadGamee.Valuemusic = saveData.values.MusicValue;
         SceneManager.LoadScene("Game");
 
-       LanguageManager.Language = saveData.values.Language;
+       //LanguageManager.Language = saveData.values.Language;
     }
 
 
@@ -126,6 +124,7 @@ public class SaveLoadManager : MonoBehaviour
             100f
         );
         //slotsView.ChangeSlot(CurrentIndex, Sprite);
+        //slotsView.ChangeSlot(CurrentIndex, Color.red);
 
         SaveAll(screenshot);
     }
@@ -153,28 +152,39 @@ public class SaveLoadManager : MonoBehaviour
 
     public void Save1()
     {
-        Debug.Log(0);
         fileName = "saved0";
         SavePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
+        CurrentIndex = 0;
+        GameObject PausePanel = GameObject.FindGameObjectWithTag("Pause");
+        PausePanel.SetActive(false);
+        GameObject SlotsPanel = GameObject.FindGameObjectWithTag("Slots");
+        SlotsPanel.SetActive(false);
         StartCoroutine(CaptureScreenshotAndSave());
         SceneManager.LoadScene("MainMenu");
-        CurrentIndex = 0;
     }
     public void Save2()
     {
         fileName = "saved1";
         SavePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
+        CurrentIndex = 1;
+        GameObject PausePanel = GameObject.FindGameObjectWithTag("Pause");
+        PausePanel.SetActive(false);
+        GameObject SlotsPanel = GameObject.FindGameObjectWithTag("Slots");
+        SlotsPanel.SetActive(false);
         StartCoroutine(CaptureScreenshotAndSave());
         SceneManager.LoadScene("MainMenu");
-        CurrentIndex = 1;
     }
     public void Save3()
     {
         fileName = "saved2";
         SavePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
+        CurrentIndex = 2;
+        GameObject PausePanel = GameObject.FindGameObjectWithTag("Pause");
+        PausePanel.SetActive(false);
+        GameObject SlotsPanel = GameObject.FindGameObjectWithTag("Slots");
+        SlotsPanel.SetActive(false);
         StartCoroutine(CaptureScreenshotAndSave());
         SceneManager.LoadScene("MainMenu");
-        CurrentIndex = 2;
 
     }
 

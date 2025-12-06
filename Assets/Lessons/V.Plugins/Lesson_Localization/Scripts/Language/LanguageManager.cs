@@ -19,23 +19,25 @@ namespace Lessons.Plugins.Lesson_Localization
 
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
-            if (instance != null)
+            
+            if (instance == null)
             {
-                throw new Exception("Language Manager is already exists!");
+
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                //throw new Exception("Language Manager is already exists!");
             }
 
-            instance = this;
+                instance = this;
             
             var initialLanguage = Application.systemLanguage;
             language = initialLanguage;
             OnLanguageChanged?.Invoke(initialLanguage);
         }
 
-        private void Update()
-        {
-            Debug.Log(LanguageManager.Language.ToString() == "Russian");
-        }
         private void OnDestroy()
         {
             instance = null;

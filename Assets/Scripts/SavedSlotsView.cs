@@ -9,9 +9,13 @@ public class SavedSlotsView : MonoBehaviour
     public Image[] slots;
     public Button[] buttons;
 
-    public void ChangeSlot(int index, Sprite screenshot)
+    //public void ChangeSlot(int index, Sprite screenshot)
+    //{
+    //    slots[index].sprite = screenshot;
+    //}
+    public void ChangeSlot(int index, Color color)
     {
-        slots[index].sprite = screenshot;
+        slots[index].color = color;
     }
 
 

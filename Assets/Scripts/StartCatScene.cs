@@ -22,6 +22,7 @@ public class StartCatScene : MonoBehaviour
     public AudioSource liftOpen;
     public static bool CanSettings = false;
     public GameObject Instrukcia;
+    public GameObject Instrukcia1;
     public GameObject Translator;
     public AudioSource NachZvuk;
     public static bool IsAnimated = false;
@@ -152,10 +153,14 @@ public class StartCatScene : MonoBehaviour
     private void dalshe()
     {
         Instrukcia.SetActive(false);
-        Instrukcia.GetComponent<TextMeshProUGUI>().text = "Чтобы выйти в меню паузы, нажми на esc. Приятной игры!";
-        Instrukcia.SetActive(true);
+        Instrukcia1.SetActive(true);
+        Invoke("aboba", 3f);
     }
 
+    private void aboba()
+    {
+        Instrukcia1.SetActive(false);
+    }
     public void SetText()
     {
         if (LanguageManager.Language.ToString() == "Russian")

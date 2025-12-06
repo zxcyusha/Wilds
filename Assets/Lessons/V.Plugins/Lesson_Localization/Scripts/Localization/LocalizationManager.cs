@@ -20,12 +20,17 @@ namespace Lessons.Plugins.Lesson_Localization
 
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
-            if (instance != null)
+            if (instance == null)
             {
-                throw new Exception("Localization Manager is already exists!");
+                Debug.Log(" —ﬁÿ¿!!!!!!!!!!!");
+                DontDestroyOnLoad(gameObject);
             }
-            
+            else
+            {
+                Destroy(gameObject);
+                //hrow new Exception("Localization Manager is already exists!");
+            }
+
             instance = this;
             if (textStorage == null)
             {

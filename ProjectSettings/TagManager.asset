@@ -42,6 +42,8 @@ TagManager:
   - Bad
   - Good1
   - Bad1
+  - Pause
+  - Slots
   layers:
   - Default
   - TransparentFX

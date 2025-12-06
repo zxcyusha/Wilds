@@ -1313,6 +1313,58 @@
           "value": "Загрузка..."
         }
       ]
+    },
+    {
+      "key": "Slot1",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Slot 1"
+        },
+        {
+          "language": "Russian",
+          "value": "Слот 1"
+        }
+      ]
+    },
+    {
+      "key": "Slot2",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Slot 2"
+        },
+        {
+          "language": "Russian",
+          "value": "Слот 2"
+        }
+      ]
+    },
+    {
+      "key": "Slot3",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Slot 3"
+        },
+        {
+          "language": "Russian",
+          "value": "Слот 3"
+        }
+      ]
+    },
+    {
+      "key": "Esc",
+      "translations": [
+        {
+          "language": "English",
+          "value": "To exit the pause menu, press esc. Play with pleasure!"
+        },
+        {
+          "language": "Russian",
+          "value": "Чтобы выйти в меню паузы, нами на esc. Приятной игры!"
+        }
+      ]
     }
 
   ]
