@@ -7,8 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject PausePanel;
     public GameObject LoadingPanel;
+    public DataTiper DataTiper;
     public void NewGame()
     {
+        DataTiper.needAnimating = true;
         LoadingPanel.SetActive(true);
         SceneManager.LoadScene("Game");
     }
@@ -26,6 +28,12 @@ public class MainMenu : MonoBehaviour
 
     public void InMenu()
     {
+        PausePanel.SetActive(false);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void GoToMenu()
+    {
+        
     }
 }

@@ -1196,6 +1196,124 @@
           "value": "Нажми на F, чтобы выбрать мощность для бур-машины."
         }
       ]
+    },
+    {
+      "key": "Str1",
+      "translations": [
+        {
+          "language": "English",
+          "value": "A new day, a new morning, but still the same hatred for that place."
+        },
+        {
+          "language": "Russian",
+          "value": "Новый день, новое утро, но всё та же моя ненависть к тому месту."
+        }
+      ]
+    },
+    {
+      "key": "Str2",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Every day, it gets harder to find reasons to stay here."
+        },
+        {
+          "language": "Russian",
+          "value": "С каждым днём всё труднее придумывать причины оставаться здесь."
+        }
+      ]
+    },
+    {
+      "key": "Str3",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Every day, the rock pushes and rubs me into the ground,"
+        },
+        {
+          "language": "Russian",
+          "value": "С каждым днём порода всё больше давит и втирает меня в землю,"
+        }
+      ]
+    },
+    {
+      "key": "Str4",
+      "translations": [
+        {
+          "language": "English",
+          "value": "destroying the remnants of the old man."
+        },
+        {
+          "language": "Russian",
+          "value": "уничтожая остатки прежнего человека."
+        }
+      ]
+    },
+    {
+      "key": "Str5",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I feel exhausted."
+        },
+        {
+          "language": "Russian",
+          "value": "Я чувствую истощение."
+        }
+      ]
+    },
+    {
+      "key": "Str6",
+      "translations": [
+        {
+          "language": "English",
+          "value": "I don't know how much longer I can hold out in this hell, but at least for today"
+        },
+        {
+          "language": "Russian",
+          "value": "Не знаю, сколько ещё продержусь в этом аду, но, по крайне мере сегодня"
+        }
+      ]
+    },
+    {
+      "key": "Str7",
+      "translations": [
+        {
+          "language": "English",
+          "value": "The elevator drops me rapidly into the"
+        },
+        {
+          "language": "Russian",
+          "value": "Лифт стремительно опускает меня в"
+        }
+      ]
+    },
+    {
+      "key": "Play",
+      "translations": [
+        {
+          "language": "English",
+          "value": "New game"
+        },
+        {
+          "language": "Russian",
+          "value": "Новая игра"
+        }
+      ]
+    },
+    {
+      "key": "Loading",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Loading..."
+        },
+        {
+          "language": "Russian",
+          "value": "Загрузка..."
+        }
+      ]
     }
+
   ]
 }

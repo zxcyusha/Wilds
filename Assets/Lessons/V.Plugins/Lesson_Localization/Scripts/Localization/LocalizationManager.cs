@@ -9,12 +9,18 @@ namespace Lessons.Plugins.Lesson_Localization
         private static LocalizationManager instance;
 
         [FormerlySerializedAs("textConfig")]
-        [SerializeField] private TextStorage textStorage;
+        [SerializeField]
+        private TextStorage textStorage;
 
         private ITranslator<string> textTranslator;
 
+        private ITranslator<Sprite> spriteTranslator;
+
+        private ITranslator<AudioClip> audioTranslator;
+
         private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
             if (instance != null)
             {
                 throw new Exception("Localization Manager is already exists!");
@@ -46,6 +52,16 @@ namespace Lessons.Plugins.Lesson_Localization
             }
 
             return key;
+        }
+
+        public static Sprite GetSprite(string key, SystemLanguage language)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static AudioClip GetAudio(string key, SystemLanguage language)
+        {
+            throw new NotImplementedException();            
         }
     }
 }

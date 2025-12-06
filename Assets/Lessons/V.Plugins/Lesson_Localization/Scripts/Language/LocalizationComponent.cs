@@ -1,22 +1,32 @@
-using TMPro;
 using UnityEngine;
 
 namespace Lessons.Plugins.Lesson_Localization
 {
     public sealed class LocalizationComponent : MonoBehaviour
     {
-        [SerializeField] private string key;
-        private TextMeshProUGUI text;
-
-        private void Awake()
-        {
-            text = GetComponent<TextMeshProUGUI>();
-        }
-
-
+        // [SerializeReference]
+        // private ILanguageListener[] _listeners;
+        
+        [SerializeField]
+        private TextLanguageListener[] _listeners;
+    
         private void OnEnable()
         {
-            text.text = LocalizationManager.GetText(key, LanguageManager.Language);
+            UpdateLanguage(LanguageManager.Language);
+            LanguageManager.OnLanguageChanged += UpdateLanguage;
+        }
+
+        private void OnDisable()
+        {
+            LanguageManager.OnLanguageChanged -= UpdateLanguage;            
+        }
+
+        private void UpdateLanguage(SystemLanguage language)
+        {
+            foreach (var listener in _listeners)
+            {
+                listener.OnLanguageChanged(language);
+            }
         }
     }
 }

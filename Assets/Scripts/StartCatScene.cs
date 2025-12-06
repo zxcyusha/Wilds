@@ -1,7 +1,9 @@
 using Cinemachine;
+using Lessons.Plugins.Lesson_Localization;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StartCatScene : MonoBehaviour
@@ -21,31 +23,42 @@ public class StartCatScene : MonoBehaviour
     public static bool CanSettings = false;
     public GameObject Instrukcia;
     public GameObject Translator;
+    public AudioSource NachZvuk;
     public static bool IsAnimated = false;
     private int i = 0;
-    private string s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
-    private string s2 = "С каждым днём всё труднее придумывать причины оставаться здесь.";
-    private string s3 = "С каждым днём порода всё больше давит и втирает меня в землю,";
-    private string s4 = "уничтожая остатки прежнего человека.";
-    private string s5 = "Я чувствую истощение.";
-    private string s6 = "Не знаю, сколько ещё продержусь в этом аду, но, по крайне мере сегодня";
-    private string s7 = "Лифт стремительно опускает меня в";
+    public static string s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
+    public static string s2 = "С каждым днём всё труднее придумывать причины оставаться здесь.";
+    public static string s3 = "С каждым днём порода всё больше давит и втирает меня в землю,";
+    public static string s4 = "уничтожая остатки прежнего человека.";
+    public static string s5 = "Я чувствую истощение.";
+    public static string s6 = "Не знаю, сколько ещё продержусь в этом аду, но, по крайне мере сегодня";
+    public static string s7 = "Лифт стремительно опускает меня в";
+
+    public bool IsRussia = true;
 
     void Start()
     {
-        Cursor.visible = false;
-        kamera.transform.position = new Vector3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z+0.1f);
-        kamera.GetComponent<CinemachineBrain>().enabled = false;
-        player.GetComponent<AnimatorCotroller>().enabled = false;
-        StartCoroutine(DelayedAction(s1));
-        Invoke("aboba1", 6.4f);
-        Invoke("aboba2", 11.1f);
-        Invoke("aboba3", 15.4f);
-        Invoke("aboba4", 18.4f);
-        Invoke("aboba5", 20.8f);
-        Invoke("aboba6", 25.8f);
-        Invoke("end", 28.6f);
-        Invoke("END", 35f);
+        SetText();
+        if (DataTiper.needAnimating)
+        {
+            Cursor.visible = false;
+            kamera.transform.position = new Vector3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z + 0.1f);
+            kamera.GetComponent<CinemachineBrain>().enabled = false;
+            player.GetComponent<AnimatorCotroller>().enabled = false;
+            StartCoroutine(DelayedAction(s1));
+            Invoke("aboba1", 6.4f);
+            Invoke("aboba2", 11.1f);
+            Invoke("aboba3", 15.4f);
+            Invoke("aboba4", 18.4f);
+            Invoke("aboba5", 20.8f);
+            Invoke("aboba6", 25.8f);
+            Invoke("end", 28.6f);
+            Invoke("END", 35f);
+        }
+        else
+        {
+            NachZvuk.Stop();
+        }
     }
 
     public IEnumerator DelayedAction(string soob)
@@ -141,5 +154,29 @@ public class StartCatScene : MonoBehaviour
         Instrukcia.SetActive(false);
         Instrukcia.GetComponent<TextMeshProUGUI>().text = "Чтобы выйти в меню паузы, нажми на esc. Приятной игры!";
         Instrukcia.SetActive(true);
+    }
+
+    public void SetText()
+    {
+        if (LanguageManager.Language.ToString() == "Russian")
+        {
+            s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
+            s2 = "С каждым днём всё труднее придумывать причины оставаться здесь.";
+            s3 = "С каждым днём порода всё больше давит и втирает меня в землю,";
+            s4 = "уничтожая остатки прежнего человека.";
+            s5 = "Я чувствую истощение.";
+            s6 = "Не знаю, сколько ещё продержусь в этом аду, но, по крайне мере сегодня";
+            s7 = "Лифт стремительно опускает меня в";
+        }
+        else
+        {
+            s1 = "A new day, a new morning, but still the same hatred for that place.";
+            s2 = "Every day, it gets harder to find reasons to stay here.";
+            s3 = "Every day, the rock pushes and rubs me into the ground,";
+            s4 = "destroying the remnants of the old man.";
+            s5 = "I feel exhausted.";
+            s6 = "I don't know how much longer I can hold out in this hell, but at least for today";
+            s7 = "The elevator drops me rapidly into the";
+        }
     }
 }

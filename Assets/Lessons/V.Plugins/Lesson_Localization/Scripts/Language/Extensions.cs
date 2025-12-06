@@ -14,7 +14,7 @@ namespace Lessons.Plugins.Lesson_Localization
                     return true;
                 }
             }
-
+            
             result = default;
             return false;
         }

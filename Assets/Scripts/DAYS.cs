@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class DAYS : MonoBehaviour
 {
@@ -69,6 +70,11 @@ public class DAYS : MonoBehaviour
     public AudioSource HappyAudio;
     public GameObject HappyPanel;
     public static bool NANOMETRS;
+    public GameObject AreYouShure;
+    public GameObject Zagruzka;
+    public SaveLoadManager SaveLoadManager;
+    [SerializeField] private Slider SensitivitySlider;
+    [SerializeField] private Slider MusicSlider;
     public static int day;
     public bool CAN1;
     public bool CAN2;
@@ -81,6 +87,8 @@ public class DAYS : MonoBehaviour
 
     void Start()
     {
+        SensitivitySlider.value = 1f;
+        MusicSlider.value = 1f;
         Time.timeScale = 1f;
         bur.transform.localPosition = new Vector3(-24.07f, -6.67f, -12.93f);
         bur.transform.localRotation = Quaternion.Euler(0, 90, 0);
@@ -122,6 +130,11 @@ public class DAYS : MonoBehaviour
                         ResetShahta();
                         firstRoom.RandomZnach();
                     }
+                }
+                else if (DAY1)
+                {
+                    //AreYouShure.SetActive(true);
+
                 }
                 if ((DAY2 && (TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && (Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3)) || CAN2)
                 {
@@ -332,6 +345,8 @@ public class DAYS : MonoBehaviour
             Invoke("ZaKrPanel", 3f);
             Cursor.visible = false;
             DenNStart();
+            Zagruzka.SetActive(true);
+            SaveLoadManager.Save();
         }
         else
         {
@@ -342,7 +357,7 @@ public class DAYS : MonoBehaviour
                 TemneyushiyEkran.SetActive(false);
                 Cursor.visible = false;
                 Zabludilsa.GetComponent<BadEnd>().enabled = true;
-        }
+            }
             else
             {
                 diary.SetActive(false);
@@ -369,6 +384,7 @@ public class DAYS : MonoBehaviour
         TemneyushiyEkran.SetActive(false);
         DenN.SetActive(false);
         FonShum.Play();
+        Zagruzka.SetActive(false);
     }
 
     private void DenNStart()
