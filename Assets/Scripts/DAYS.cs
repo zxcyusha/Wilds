@@ -16,7 +16,10 @@ public class DAYS : MonoBehaviour
     public GameObject F;
     public GameObject TemneyushiyEkran;
     public GameObject diary;
-    public GameObject DenN;
+    public GameObject Den2;
+    public GameObject Den3;
+    public GameObject Den4;
+    public GameObject Den5;
     public GameObject Door1;
     public GameObject Door2;
     public GameObject RaspInstr;
@@ -187,7 +190,7 @@ public class DAYS : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out RaycastHit hit, 3f, pickUpLayerMask))
         {
-            
+
             if (hit.collider.CompareTag("Raspisanie") && !raspisanieYes)
             {
                 RaspInstr.SetActive(true);
@@ -211,7 +214,6 @@ public class DAYS : MonoBehaviour
                         bur.transform.localPosition = new Vector3(1.09f, -6.67f, -3.1f);
                         bur.transform.localRotation = Quaternion.Euler(0, 270, 0);
 
-                        DenN.GetComponent<TextMeshProUGUI>().text = "Äåíü 2";
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
                         ResetFirstRoom();
@@ -219,10 +221,27 @@ public class DAYS : MonoBehaviour
                         firstRoom.RandomZnach();
                     }
                 }
-                else if (DAY1)
+                else if (DAY1 && !((TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && RoomWithRart.CartYes))
                 {
-                    //AreYouShure.SetActive(true);
+                    AreYouShure.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Diary1.SetActive(true);
+                        RoomWithRart.canDvig = false;
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.telesh = false;
+                        Stones.poloshili = false;
+                        openDoors.CloseAllDoors();
+                        bur.transform.localPosition = new Vector3(1.09f, -6.67f, -3.1f);
+                        bur.transform.localRotation = Quaternion.Euler(0, 270, 0);
 
+                        TemneyushiyEkran.SetActive(true);
+                        Invoke("DnevnikOpen", 1);
+                        ResetFirstRoom();
+                        ResetShahta();
+                        firstRoom.RandomZnach();
+                    }
                 }
                 if ((DAY2 && (TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && (Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3)) || CAN2)
                 {
@@ -236,7 +255,6 @@ public class DAYS : MonoBehaviour
                         RoomWithRart.canDvig = false;
                         Stones.poloshili = false;
                         RoomWithRart.telesh = false;
-                        DenN.GetComponent<TextMeshProUGUI>().text = "Äåíü 3";
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
                         ResetFirstRoom();
@@ -248,6 +266,31 @@ public class DAYS : MonoBehaviour
                         openDoors.CloseAllDoors();
                     }
                 }
+
+                else if (DAY2 && !((TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && (Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3)))
+                {
+                    AreYouShure.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Diary1.SetActive(false);
+                        Diary2.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
+                        Stones.poloshili = false;
+                        RoomWithRart.telesh = false;
+                        TemneyushiyEkran.SetActive(true);
+                        Invoke("DnevnikOpen", 1);
+                        ResetFirstRoom();
+                        ResetShahta();
+                        ResetPtica();
+                        ResetTeleshki();
+                        firstRoom.RandomZnach();
+                        halk.SetActive(true);
+                        openDoors.CloseAllDoors();
+                    }
+                }
+
                 if ((DAY3 && (TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && (Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3) && RoomWithRart.CartYes) || CAN3)
                 {
                     Babaka.SetActive(true);
@@ -262,7 +305,6 @@ public class DAYS : MonoBehaviour
                         Stones.poloshili = false;
                         bur.transform.localPosition = new Vector3(1.09f, -6.67f, -16.04f);
                         RoomWithRart.telesh = false;
-                        DenN.GetComponent<TextMeshProUGUI>().text = "Äåíü 4";
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
                         ResetFirstRoom();
@@ -273,6 +315,31 @@ public class DAYS : MonoBehaviour
                         openDoors.CloseAllDoors();
                     }
                 }
+
+                else if ((DAY3 && !((TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && (Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3) && RoomWithRart.CartYes)))
+                {
+                    AreYouShure.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Diary2.SetActive(false);
+                        Diary3.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
+                        Stones.poloshili = false;
+                        bur.transform.localPosition = new Vector3(1.09f, -6.67f, -16.04f);
+                        RoomWithRart.telesh = false;
+                        TemneyushiyEkran.SetActive(true);
+                        Invoke("DnevnikOpen", 1);
+                        ResetFirstRoom();
+                        ResetShahta();
+                        ResetPtica();
+                        ResetTeleshki();
+                        firstRoom.RandomZnach();
+                        openDoors.CloseAllDoors();
+                    }
+                }
+
                 if ((DAY4 && (TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && RoomWithRart.CartYes) || CAN4)
                 {
                     F.SetActive(true);
@@ -287,7 +354,31 @@ public class DAYS : MonoBehaviour
                         bur.transform.localPosition = new Vector3(-24.55f, -6.67f, -5.01f);
                         bur.transform.localRotation = Quaternion.Euler(0, 180, 0);
                         RoomWithRart.telesh = false;
-                        DenN.GetComponent<TextMeshProUGUI>().text = "Äåíü 5";
+                        TemneyushiyEkran.SetActive(true);
+                        Invoke("DnevnikOpen", 1);
+                        ResetShahta();
+                        ResetPtica();
+                        ResetTeleshki();
+                        firstRoom.RandomZnach();
+                        openDoors.CloseAllDoors();
+                        Cart.prikrepiliList = true;
+                    }
+                }
+
+                else if (DAY4 && !((TakeListok.vibrali1 && TakeListok.vibrali2 && TakeListok.vibrali3 && TakeListok.vibrali4 && TakeListok.vibrali5) && BurMachina.BoorSdelali && RoomWithRart.CartYes))
+                {
+                    AreYouShure.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Diary3.SetActive(false);
+                        Diary4.SetActive(true);
+                        RoomWithRart.katitsa = true;
+                        Peretashit.transform.localPosition = new Vector3(26.7f, -1.71f, -25.46f);
+                        RoomWithRart.canDvig = false;
+                        Stones.poloshili = false;
+                        bur.transform.localPosition = new Vector3(-24.55f, -6.67f, -5.01f);
+                        bur.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                        RoomWithRart.telesh = false;
                         TemneyushiyEkran.SetActive(true);
                         Invoke("DnevnikOpen", 1);
                         ResetShahta();
@@ -311,14 +402,32 @@ public class DAYS : MonoBehaviour
                         Invoke("DnevnikOpen", 1);
                     }
                 }
+                else if (DAY5 && !((Nanometr.PODKYTILI1 && Nanometr1.PODKYTILI2 && Nanometr2.PODKYTILI3) && BurMachina.BoorSdelali && RoomWithRart.CartYes))
+                {
+                    AreYouShure.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Diary4.SetActive(false);
+                        Diary5.SetActive(true);
+                        EndGame = true;
+                        TemneyushiyEkran.SetActive(true);
+                        Invoke("DnevnikOpen", 1);
+                    }
+                }
 
             }
-            else F.SetActive(false);
+            else {
+                F.SetActive(false);
+                AreYouShure.SetActive(false);
+            }
 
             if (Input.GetKeyDown(KeyCode.Return)) RaspInstr.SetActive(false);
-            
+
         }
-        else F.SetActive(false);
+        else {
+            F.SetActive(false);
+            AreYouShure.SetActive(false);
+        }
 
         if (diary.activeInHierarchy && Input.GetKeyDown(KeyCode.Space))
         {
@@ -470,14 +579,20 @@ public class DAYS : MonoBehaviour
         Door2.GetComponent<Animator>().SetBool("open", true);
         LiftOtkr.Play();
         TemneyushiyEkran.SetActive(false);
-        DenN.SetActive(false);
+        Den2.SetActive(false);
+        Den3.SetActive(false);
+        Den4.SetActive(false);
+        Den5.SetActive(false);
         FonShum.Play();
         Zagruzka.SetActive(false);
     }
 
     private void DenNStart()
     {
-        DenN.SetActive(true);
+        if (DAY2) Den2.SetActive(true);
+        else if (DAY3) Den3.SetActive(true);
+        else if (DAY4) Den4.SetActive(true);
+        else if (DAY5) Den5.SetActive(true);
         Door1.GetComponent<AudioSource>().Play();
     }
 

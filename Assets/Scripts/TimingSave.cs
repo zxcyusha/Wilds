@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class TimingSave : MonoBehaviour
 {
-    public string filePath;
+    public string filename;
     public TextMeshProUGUI textik;
 
     void Start()
     {
-        string fullPath = Path.Combine(Application.persistentDataPath, filePath);
+        string fullPath = Path.Combine(Application.persistentDataPath, filename.ToLower() + ".json");
 
         if (File.Exists(fullPath))
         {

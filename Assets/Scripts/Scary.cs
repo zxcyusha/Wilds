@@ -11,7 +11,6 @@ public class ТряскаКамеры : MonoBehaviour
 
     public float distance = 3f;
     public static float strength = 0.03f;
-    public Image panel;
     public float speed = 0.2f;
     public GameObject Babaka;
     public GameObject Player;
@@ -23,10 +22,14 @@ public class ТряскаКамеры : MonoBehaviour
     private bool babaka = false;
     private bool miliShepolochek = false;
     public bool PticaEnd = false;
-    
-    private void Start()
-    {
-    }
+    private bool day1Scary = false;
+    public AudioSource dihanie;
+    public AudioSource serdce;
+    public AudioSource pic;
+    public GameObject panelSkary;
+    public GameObject player;
+    public AudioSource Shagi;
+    public AudioSource Beg;
 
     private void Update()
     {
@@ -59,6 +62,8 @@ public class ТряскаКамеры : MonoBehaviour
                 Lightt.SetActive(false);
                 PticaEnd = true;
             }
+
+            if (hit.collider.CompareTag("ScaryFirst") && !day1Scary) Scary1();
         }
     }
 
@@ -70,6 +75,33 @@ public class ТряскаКамеры : MonoBehaviour
     private void aga()
     {
         Lightt.SetActive(false);
+    }
+
+    private void Scary1()
+    {
+        day1Scary = true;
+        serdce.Play();
+        dihanie.Play();
+        player.GetComponent<AnimatorCotroller>().enabled = false;
+        panelSkary.SetActive(true);
+        Invoke("zvuk", 13.3f);
+        Shagi.Stop();
+        Beg.Stop();
+    }
+
+    private void zvuk()
+    {
+        serdce.Stop();
+        dihanie.Stop();
+        pic.Play();
+        Invoke("konec", 10f);
+
+        player.GetComponent<AnimatorCotroller>().enabled = true;
+    }
+
+    private void konec()
+    {
+        panelSkary.SetActive(false );
     }
 }
 

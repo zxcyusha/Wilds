@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2627a8b9db977e4190bf6f4f5bd6422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: C:/Users/User/AppData/LocalLow/Ponkravt/Depths\saved1.json
+  filename: saved1
   textik: {fileID: 383125079}
 --- !u!114 &383125079
 MonoBehaviour:
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2627a8b9db977e4190bf6f4f5bd6422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: C:/Users/User/AppData/LocalLow/Ponkravt/Depths\saved2.json
+  filename: saved2
   textik: {fileID: 437042767}
 --- !u!114 &437042767
 MonoBehaviour:
@@ -3817,7 +3817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2627a8b9db977e4190bf6f4f5bd6422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: C:/Users/User/AppData/LocalLow/Ponkravt/Depths\saved0.json
+  filename: saved0
   textik: {fileID: 1293650531}
 --- !u!1 &1301538437
 GameObject:

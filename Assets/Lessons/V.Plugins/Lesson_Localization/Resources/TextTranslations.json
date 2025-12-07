@@ -1404,6 +1404,32 @@
           "value": "Чтобы выйти в меню паузы, нами на esc. Приятной игры!"
         }
       ]
+    },
+    {
+      "key": "Sure",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Are you sure you want to end the day without completing all the tasks? Click on F if you want to end the day."
+        },
+        {
+          "language": "Russian",
+          "value": "Ты уверен, что хочешь закончить день, не выполнив все задачи до конца? Нажми на F, если хочешь закончить день."
+        }
+      ]
+    },
+    {
+      "key": "AgainHere",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Why am I here again?"
+        },
+        {
+          "language": "Russian",
+          "value": "Почему я снова здесь?"
+        }
+      ]
     }
 
   ]
