@@ -11,13 +11,13 @@ public class Slott2 : MonoBehaviour
 
     void Start()
     {
+        imagePath2 = Path.Combine(Application.persistentDataPath, "saved1".ToLower() + "_preview.png");
         LoadImageFromFile2();
     }
     public void LoadImageFromFile2()
     {
         if (File.Exists(imagePath2))
         {
-            Debug.Log("ABOBA2 =" + imagePath2);
             byte[] fileData = File.ReadAllBytes(imagePath2);
             Texture2D tex = new Texture2D(2, 2);
             if (tex.LoadImage(fileData))

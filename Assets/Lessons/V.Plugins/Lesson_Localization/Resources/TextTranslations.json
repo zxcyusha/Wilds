@@ -1003,6 +1003,45 @@
       ]
     },
     {
+      "key": "Day3",
+      "translations": [
+        {
+          "language": "English",
+          "value": "day 3"
+        },
+        {
+          "language": "Russian",
+          "value": "день 3"
+        }
+      ]
+    },
+    {
+      "key": "Day4",
+      "translations": [
+        {
+          "language": "English",
+          "value": "day 4"
+        },
+        {
+          "language": "Russian",
+          "value": "день 4"
+        }
+      ]
+    },
+    {
+      "key": "Day5",
+      "translations": [
+        {
+          "language": "English",
+          "value": "day 5"
+        },
+        {
+          "language": "Russian",
+          "value": "день 5"
+        }
+      ]
+    },
+    {
       "key": "Dear diary",
       "translations": [
         {

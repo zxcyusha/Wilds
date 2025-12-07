@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
-using UnityEngine.Purchasing.MiniJSON;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -22,14 +21,22 @@ public class SaveLoadManager : MonoBehaviour
     [SerializeField] private Button Sl3;
     public Sprite Sprite;
     private int CurrentIndex = 0;
+    private string language;
 
     public void Start()
     {
         SavePath = Path.Combine(Application.persistentDataPath, fileName + ".json");
 
-        if (fileName == "saved0") Slot1.imagePath1 = Path.Combine(Application.persistentDataPath, "saved0".ToLower() + "_preview.png");
-        else if (fileName == "saved1") Slott2.imagePath2 = Path.Combine(Application.persistentDataPath, "saved1".ToLower() + "_preview.png");
-        else if (fileName == "saved2") Slott3.imagePath3 = Path.Combine(Application.persistentDataPath, "saved2".ToLower() + "_preview.png");
+        string path = Path.Combine(Application.persistentDataPath, "saved".ToLower() + ".json");
+
+        if (File.Exists(path))
+        {
+            string jsonchik = File.ReadAllText(path);
+            SaveData datochka = JsonUtility.FromJson<SaveData>(jsonchik);
+            if (datochka.values.Language == "Russian") LanguageManager.Language = SystemLanguage.Russian;
+            else if (datochka.values.Language == "English") LanguageManager.Language = SystemLanguage.English;
+        }
+
     }
     public void SaveAll(Texture2D screenshot = null)
     {
@@ -77,7 +84,17 @@ public class SaveLoadManager : MonoBehaviour
         File.WriteAllText(SavePath, json);
         Debug.Log("Сохранено в файл: " + SavePath);
 
-        data.values.Language = LanguageManager.Language.ToString();
+        string SavePath1 = Path.Combine(Application.persistentDataPath, "saved".ToLower() + ".json");
+        SaveData data1 = new SaveData();
+        if (LanguageManager.Language.ToString() == "Russian") data1.values.Language = "Russian";
+        else if (LanguageManager.Language.ToString() == "English") data1.values.Language = "English";
+        string json1 = JsonUtility.ToJson(data1);
+        File.WriteAllText(SavePath1, json1);
+        Debug.Log(SavePath1);
+
+        //data.values.Language = LanguageManager.Language.ToString();
+        //language = (data.values.Language.ToString());
+        //Debug.Log(language);
     }
 
     public void LoadAll()
@@ -99,8 +116,6 @@ public class SaveLoadManager : MonoBehaviour
         Nanometr1.PODKYTILI2 = saveData.progress.Bird;
         Nanometr2.PODKYTILI3 = saveData.progress.Bird;
 
-        Debug.Log(saveData.progress.Bird);
-
         RoomWithRart.CartYes = saveData.progress.Carts;
 
         BurMachina.BoorSdelali = saveData.progress.Bur;
@@ -112,8 +127,10 @@ public class SaveLoadManager : MonoBehaviour
         LoadGamee.Valuemusic = saveData.values.MusicValue;
         SceneManager.LoadScene("Game");
 
-       ChangeLanguage.language = saveData.values.Language;
-        Debug.Log("ЯЗЫК:" + LanguageManager.Language.ToString());
+        if (saveData.values.Language == "Russian") LanguageManager.Language = SystemLanguage.Russian;
+        if (saveData.values.Language == "English") LanguageManager.Language = SystemLanguage.English;
+        //language = saveData.values.Language;
+        //Debug.Log(saveData.values.Language);
     }
 
 

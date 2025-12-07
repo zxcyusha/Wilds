@@ -10,6 +10,7 @@ public class Slot1 : MonoBehaviour
 
     void Start()
     {
+        imagePath1 = Path.Combine(Application.persistentDataPath, "saved0".ToLower() + "_preview.png");
         LoadImageFromFile1();
     }
 
@@ -23,7 +24,7 @@ public class Slot1 : MonoBehaviour
             {
                 Sprite sprite = SpriteFromTexture(tex);
                 targetImage.sprite = sprite;
-                Debug.Log("»зображение успешно загружено и установлено.");
+                //Debug.Log("»зображение успешно загружено и установлено.");
             }
             else
             {

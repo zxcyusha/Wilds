@@ -11,6 +11,7 @@ public class Slott3 : MonoBehaviour
 
     void Start()
     {
+        imagePath3 = Path.Combine(Application.persistentDataPath, "saved2".ToLower() + "_preview.png");
         LoadImageFromFile3();
     }
     public void LoadImageFromFile3()

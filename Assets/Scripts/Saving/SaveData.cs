@@ -45,6 +45,6 @@ public class SaveData
     public DiaryData diary = new DiaryData();
     public DayProgess progress = new DayProgess();
     public SettingsValues values = new SettingsValues();
-    public string saveName;   // имя сейва
-    public string saveTime;   // время сохранения, текстом
+    public string saveName;
+    public string saveTime;
 }
