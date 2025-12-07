@@ -25,6 +25,7 @@ public class Nanometr : MonoBehaviour
     void Start()
     {
         StrelkaRotation();
+        z1 = !PODKYTILI1;
     }
 
     void Update()

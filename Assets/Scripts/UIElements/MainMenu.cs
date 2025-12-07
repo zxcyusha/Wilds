@@ -1,3 +1,4 @@
+using Lessons.Plugins.Lesson_Localization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,14 @@ public class MainMenu : MonoBehaviour
     public GameObject PausePanel;
     public GameObject LoadingPanel;
     public DataTiper DataTiper;
+
+    public bool Russia = true;
+
+    private void Update()
+    {
+        //if (Russia) LanguageManager.Language = SystemLanguage.Russian;
+        //else LanguageManager.Language = SystemLanguage.English;
+    }
     public void NewGame()
     {
         DataTiper.needAnimating = true;

@@ -25,6 +25,10 @@ public class StartCatScene : MonoBehaviour
     public GameObject Instrukcia1;
     public GameObject Translator;
     public AudioSource NachZvuk;
+
+    public Material MainInstrucsia;
+    public Texture Main1Ru;
+    public Texture Main1Engl;
     public static bool IsAnimated = false;
     private int i = 0;
     public static string s1 = "Новый день, новое утро, но всё та же моя ненависть к тому месту.";
@@ -40,7 +44,7 @@ public class StartCatScene : MonoBehaviour
     void Start()
     {
         SetText();
-        if (DataTiper.needAnimating)
+        if (IsAnimated)
         {
             Cursor.visible = false;
             kamera.transform.position = new Vector3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z + 0.1f);
@@ -55,6 +59,8 @@ public class StartCatScene : MonoBehaviour
             Invoke("aboba6", 25.8f);
             Invoke("end", 28.6f);
             Invoke("END", 35f);
+            if (LanguageManager.Language.ToString() == "Russian") MainInstrucsia.SetTexture("_MainTex", Main1Ru);
+            else MainInstrucsia.SetTexture("_MainTex", Main1Engl);
         }
         else
         {

@@ -35,7 +35,7 @@ public class SaveData
     [Serializable]
     public class SettingsValues
     {
-        public SystemLanguage Language;
+        public string Language;
         public float MusicValue;
         public float Sensitivity;
     }

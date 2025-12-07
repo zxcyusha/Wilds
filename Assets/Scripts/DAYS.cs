@@ -72,9 +72,14 @@ public class DAYS : MonoBehaviour
     public static bool NANOMETRS;
     public GameObject AreYouShure;
     public GameObject Zagruzka;
-    public SaveLoadManager SaveLoadManager;
+    public SaveLoadManager saveLoadManager;
     [SerializeField] private Slider SensitivitySlider;
     [SerializeField] private Slider MusicSlider;
+
+    public GameObject diary1;
+    public GameObject diary2;
+    public GameObject diary3;
+    public GameObject diary4;
     public static int day;
     public bool CAN1;
     public bool CAN2;
@@ -87,12 +92,95 @@ public class DAYS : MonoBehaviour
 
     void Start()
     {
-        SensitivitySlider.value = 1f;
-        MusicSlider.value = 1f;
-        Time.timeScale = 1f;
-        bur.transform.localPosition = new Vector3(-24.07f, -6.67f, -12.93f);
-        bur.transform.localRotation = Quaternion.Euler(0, 90, 0);
-        DAYFIRST();
+        if (StartCatScene.IsAnimated)
+        {
+            SensitivitySlider.value = 1f;
+            MusicSlider.value = 1f;
+            Time.timeScale = 1f;
+            bur.transform.localPosition = new Vector3(-24.07f, -6.67f, -12.93f);
+            bur.transform.localRotation = Quaternion.Euler(0, 90, 0);
+            DAYFIRST();
+        }
+        else
+        {
+            if (day == 1)
+            {
+                DAY1 = true;
+                DAY2 = false;
+                DAY3 = false;
+                DAY4 = false;
+                DAY5 = false;
+            }
+            else if (day == 2)
+            {
+                Debug.Log("шлёпа");
+                DAY1 = false;
+                DAY2 = true;
+                DAY3 = false;
+                DAY4 = false;
+                DAY5 = false;
+            }
+            else if (day == 3)
+            {
+                DAY1 = false;
+                DAY2 = false;
+                DAY3 = true;
+                DAY4 = false;
+                DAY5 = false;
+            }
+            else if (day == 4)
+            {
+                DAY1 = false;
+                DAY2 = false;
+                DAY3 = false;
+                DAY4 = true;
+                DAY5 = false;
+            }
+            else if (day == 5)
+            {
+                DAY1 = false;
+                DAY2 = false;
+                DAY3 = false;
+                DAY4 = false;
+                DAY5 = true;
+            }
+        }
+
+        if (DAY1)
+        {
+            diary1.SetActive(false);
+            diary2.SetActive(false);
+            diary3.SetActive(false);
+            diary4.SetActive(false);
+        }
+        else if (DAY2)
+        {
+            diary1.SetActive(true);
+            diary2.SetActive(false);
+            diary3.SetActive(false);
+            diary4.SetActive(false);
+        }
+        else if (DAY3)
+        {
+            diary1.SetActive(false);
+            diary2.SetActive(true);
+            diary3.SetActive(false);
+            diary4.SetActive(false);
+        }
+        else if (DAY4)
+        {
+            diary1.SetActive(false);
+            diary2.SetActive(false);
+            diary3.SetActive(true);
+            diary4.SetActive(false);
+        }
+        else if (DAY5)
+        {
+            diary1.SetActive(false);
+            diary2.SetActive(false);
+            diary3.SetActive(false);
+            diary4.SetActive(true);
+        }
     }
 
     void Update()
@@ -346,7 +434,7 @@ public class DAYS : MonoBehaviour
             Cursor.visible = false;
             DenNStart();
             Zagruzka.SetActive(true);
-            SaveLoadManager.Save();
+            StartCoroutine(saveLoadManager.CaptureScreenshotAndSave());
         }
         else
         {

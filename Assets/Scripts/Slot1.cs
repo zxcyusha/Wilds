@@ -6,18 +6,18 @@ using System.IO;
 public class Slot1 : MonoBehaviour
 {
     public Image targetImage;
-    public string imagePath;
+    public static string imagePath1;
 
     void Start()
     {
-        LoadImageFromFile();
+        LoadImageFromFile1();
     }
 
-    void LoadImageFromFile()
+    public void LoadImageFromFile1()
     {
-        if (File.Exists(imagePath))
+        if (File.Exists(imagePath1))
         {
-            byte[] fileData = File.ReadAllBytes(imagePath);
+            byte[] fileData = File.ReadAllBytes(imagePath1);
             Texture2D tex = new Texture2D(2, 2);
             if (tex.LoadImage(fileData))
             {
@@ -32,9 +32,10 @@ public class Slot1 : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Файл не найден по указанному пути: " + imagePath);
+            Debug.LogWarning("Файл не найден по указанному пути: " + imagePath1);
         }
     }
+
 
     Sprite SpriteFromTexture(Texture2D texture)
     {

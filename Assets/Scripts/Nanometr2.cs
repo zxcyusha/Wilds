@@ -25,8 +25,8 @@ public class Nanometr2 : MonoBehaviour
     {
         StrelkaZel.transform.rotation = Quaternion.Euler(13, -180, 0);
         StrelkaCher.transform.rotation = Quaternion.Euler(134, 180, 0);
-        
-      
+        z1 = !PODKYTILI3;
+
     }
 
     void Update()

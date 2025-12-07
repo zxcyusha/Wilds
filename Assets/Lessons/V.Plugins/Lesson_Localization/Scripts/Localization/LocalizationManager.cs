@@ -22,7 +22,6 @@ namespace Lessons.Plugins.Lesson_Localization
         {
             if (instance == null)
             {
-                Debug.Log(" —ﬁÿ¿!!!!!!!!!!!");
                 DontDestroyOnLoad(gameObject);
             }
             else

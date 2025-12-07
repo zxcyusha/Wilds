@@ -2,6 +2,7 @@ using Lessons.Plugins.Lesson_Localization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeSceneLocalization : MonoBehaviour
 {
@@ -26,8 +27,13 @@ public class ChangeSceneLocalization : MonoBehaviour
     public Texture Instr2Ru;
     public Texture Instr2Engl;
 
+    public Image list;
+    public Texture2D listRu;
+    public Texture2D listEngl;
+
     private void Start()
     {
+        Time.timeScale = 1f;
         Change();
     }
     public void Change()
@@ -36,6 +42,9 @@ public class ChangeSceneLocalization : MonoBehaviour
         {
             Instrucsia1.SetTexture("_MainTex", Instr1Ru);
             Instrucsia2.SetTexture("_MainTex", Instr2Ru);
+
+            Sprite listRussia = SpriteFromTexture(listRu);
+            list.sprite = listRussia;
 
             if (DAYS.DAY1) MainInstrucsia.SetTexture("_MainTex", Main1Ru);
             if (DAYS.DAY2) MainInstrucsia.SetTexture("_MainTex", Main2Ru);
@@ -48,6 +57,10 @@ public class ChangeSceneLocalization : MonoBehaviour
             Instrucsia1.SetTexture("_MainTex", Instr1Engl);
             Instrucsia2.SetTexture("_MainTex", Instr2Engl);
 
+            Sprite listEnglish = SpriteFromTexture(listEngl);
+            list.sprite = listEnglish;
+
+
             if (DAYS.DAY1) MainInstrucsia.SetTexture("_MainTex", Main1Engl);
             if (DAYS.DAY2) MainInstrucsia.SetTexture("_MainTex", Main2Engl);
             if (DAYS.DAY3) MainInstrucsia.SetTexture("_MainTex", Main3Engl);
@@ -59,5 +72,11 @@ public class ChangeSceneLocalization : MonoBehaviour
     public void DropChange(int index)
     {
         Change();
+    }
+
+    Sprite SpriteFromTexture(Texture2D texture)
+    {
+        return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                             new Vector2(0.5f, 0.5f));
     }
 }
