@@ -191,8 +191,8 @@ public class FirstRoom : MonoBehaviour
         magVospriim = Random.Range(0, 160);
         PlotnostZnach = new List<string> { "1", "2", "3", "3a", "4", "4a", "5", "6", "6a", "7" };
         plotnost = PlotnostZnach[Random.Range(0, 10)];
-        List<float> SostavZnach = new List<float> { Random.Range(500, 600), Random.Range(100, 200), Random.Range(0.05f, 1) };
-        sostav = SostavZnach[Random.Range(0, 3)];
+        List<float> SostavZnach = new List<float> { Random.Range(0.05f, 0.1f), Random.Range(1f, 2f), Random.Range(5f, 10f), Random.Range(100f, 200f), Random.Range(501f, 600f) };
+        sostav = SostavZnach[Random.Range(0, 4)];
 
         if (magVospriim <= 29) R1 = 1;
         else if (magVospriim >= 30 && magVospriim <= 59) R1 = 2;
@@ -207,10 +207,11 @@ public class FirstRoom : MonoBehaviour
         else if (plotnost == "6a") R2 = 34;
         else if (plotnost == "7") R2 = 4;
 
-        if (sostav >= 0.5f && sostav <= 1) R4 = 4;
-        else if (sostav >= 5 && sostav <= 10) R4 = 3;
-        else if (sostav >= 100 && sostav <= 200) R4 = 2;
-        else if (sostav >= 500 && sostav <= 600) R4 = 1;
+        if (sostav >= 0.05f && sostav <= 0.1) R4 = 5;
+        if (sostav >= 1f && sostav <= 2) R4 = 4;
+        if (sostav >= 5f && sostav <= 10) R4 = 3;
+        if (sostav >= 100f && sostav <= 200) R4 = 2;
+        if (sostav >= 501f && sostav <= 600) R4 = 1;
 
         if (vlashnost >= 0 && vlashnost < 0.5) R5 = 1;
         else if (vlashnost >= 0.5 && vlashnost < 0.8) R5 = 2;

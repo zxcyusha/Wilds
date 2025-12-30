@@ -48,7 +48,7 @@ public class ChangeSceneLocalization : MonoBehaviour
 
             if (DAYS.DAY1) MainInstrucsia.SetTexture("_MainTex", Main1Ru);
             if (DAYS.DAY2) MainInstrucsia.SetTexture("_MainTex", Main2Ru);
-            if (DAYS.DAY3) MainInstrucsia.SetTexture("_MainTex", Main4Ru);
+            if (DAYS.DAY3) MainInstrucsia.SetTexture("_MainTex", Main3Ru);
             if (DAYS.DAY4) MainInstrucsia.SetTexture("_MainTex", Main4Ru);
             if (DAYS.DAY5) MainInstrucsia.SetTexture("_MainTex", Main5Ru);
         }

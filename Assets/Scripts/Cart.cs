@@ -136,6 +136,7 @@ public class Cart : MonoBehaviour
     {
         if ((FirstRoom.R1 == TakeListok.rightMAG) && (FirstRoom.R2 == TakeListok.rightPLOT) && (FirstRoom.R3 == TakeListok.rightTVERD) && (FirstRoom.R4 == TakeListok.rightSOSTAV) && (FirstRoom.R5 == TakeListok.rightVLASH))
         {
+            Debug.Log("лнкндеж рш нцспеж!!!!!!!!!");
             return true;
         }
         else return false;
