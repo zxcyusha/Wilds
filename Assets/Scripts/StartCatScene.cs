@@ -23,6 +23,8 @@ public class StartCatScene : MonoBehaviour
     public static bool CanSettings = false;
     public GameObject Instrukcia;
     public GameObject Instrukcia1;
+    public GameObject Instrukcia2;
+    public GameObject Instrukcia3;
     public GameObject Translator;
     public AudioSource NachZvuk;
 
@@ -166,7 +168,22 @@ public class StartCatScene : MonoBehaviour
     private void aboba()
     {
         Instrukcia1.SetActive(false);
+        Instrukcia2.SetActive(true);
+        Invoke("instr2", 7f);
     }
+
+    private void instr2()
+    {
+        Instrukcia2.SetActive(false);
+        Instrukcia3.SetActive(true);
+        Invoke("instr3", 7f);
+    }
+
+    private void instr3()
+    {
+        Instrukcia3.SetActive(false);
+    }
+
     public void SetText()
     {
         if (LanguageManager.Language.ToString() == "Russian")

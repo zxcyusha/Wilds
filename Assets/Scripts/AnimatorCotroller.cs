@@ -97,6 +97,6 @@ public class AnimatorCotroller : MonoBehaviour
     public void Jump()
     {
         Steps.Stop();
-        rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        rig.AddForce(Vector3.up * jumpForce);
     }
 }

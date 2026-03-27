@@ -48,6 +48,7 @@ TagManager:
   - slot2
   - slot3
   - ScaryFirst
+  - Ladder
   layers:
   - Default
   - TransparentFX

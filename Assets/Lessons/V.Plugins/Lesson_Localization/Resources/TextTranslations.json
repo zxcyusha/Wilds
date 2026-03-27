@@ -1397,11 +1397,11 @@
       "translations": [
         {
           "language": "English",
-          "value": "To exit the pause menu, press esc. Play with pleasure!"
+          "value": "To exit the pause menu, press esc."
         },
         {
           "language": "Russian",
-          "value": "Чтобы выйти в меню паузы, нами на esc. Приятной игры!"
+          "value": "Чтобы выйти в меню паузы, нами на esc."
         }
       ]
     },
@@ -1430,7 +1430,48 @@
           "value": "Почему я снова здесь?"
         }
       ]
-    }
+    },
 
+    {
+      "key": "Instr2",
+      "translations": [
+        {
+          "language": "English",
+          "value": "To open the map and find out where you are, click on M. You can also open the map through the settings menu."
+        },
+        {
+          "language": "Russian",
+          "value": "Чтобы открыть карту и узнать,  где ты сейчас находишься, нажми на M. Также открыть карту можно через меню настроек."
+        }
+      ]
+    },
+
+    {
+      "key": "Instr3",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Have a good game!"
+        },
+        {
+          "language": "Russian",
+          "value": "Приятной игры!"
+        }
+      ]
+    },
+
+    {
+      "key": "Map",
+      "translations": [
+        {
+          "language": "English",
+          "value": "Map"
+        },
+        {
+          "language": "Russian",
+          "value": "Карта"
+        }
+      ]
+    }
   ]
 }
