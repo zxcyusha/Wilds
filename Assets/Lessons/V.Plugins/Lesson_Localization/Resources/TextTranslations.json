@@ -1437,11 +1437,11 @@
       "translations": [
         {
           "language": "English",
-          "value": "To open the map and find out where you are, click on M. You can also open the map through the settings menu."
+          "value": "To open the map and find out where you are, hold down the M. You can also open the map through the settings menu."
         },
         {
           "language": "Russian",
-          "value": "Чтобы открыть карту и узнать,  где ты сейчас находишься, нажми на M. Также открыть карту можно через меню настроек."
+          "value": "Чтобы открыть карту и узнать,  где ты сейчас находишься, зажми на M. Также открыть карту можно через меню настроек."
         }
       ]
     },

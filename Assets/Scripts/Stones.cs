@@ -18,12 +18,15 @@ public class Stones : MonoBehaviour
     [SerializeField] private GameObject KupritOnTable;
     [SerializeField] private GameObject HalkopiritOnTable;
     [SerializeField] private GameObject MarganecOnTable;
+    [SerializeField] private NewBehaviourScript scull;
     private GameObject boksit;
     private GameObject ferrum;
     private GameObject kuprit;
     private GameObject halkopirit;
     private GameObject marganec;
     public static bool poloshili = false;
+    private int stoneCount;
+    private bool scrimer = false;
     void Update()
     {
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))
@@ -35,6 +38,7 @@ public class Stones : MonoBehaviour
                 {
                     if (Hit.collider.CompareTag("Boksit"))
                     {
+                        stoneCount += 1;
                         boksit = Instantiate(Boksit, TakePosition.transform.position, Quaternion.identity);
                         PlayerPickUpDrop.objectGrabbable = boksit.GetComponent<ObjectGrabbable>();
                         PlayerPickUpDrop.objectGrabbable.Grab(TakePosition);
@@ -42,6 +46,7 @@ public class Stones : MonoBehaviour
                     }
                     if (Hit.collider.CompareTag("Ferrum"))
                     {
+                        stoneCount += 1;
                         ferrum = Instantiate(Furrum, TakePosition.transform.position, Quaternion.identity);
                         PlayerPickUpDrop.objectGrabbable = ferrum.GetComponent<ObjectGrabbable>();
                         PlayerPickUpDrop.objectGrabbable.Grab(TakePosition);
@@ -49,6 +54,7 @@ public class Stones : MonoBehaviour
                     }
                     if (Hit.collider.CompareTag("Kuprit"))
                     {
+                        stoneCount += 1;
                         kuprit = Instantiate(Kuprit, TakePosition.transform.position, Quaternion.identity);
                         PlayerPickUpDrop.objectGrabbable = kuprit.GetComponent<ObjectGrabbable>();
                         PlayerPickUpDrop.objectGrabbable.Grab(TakePosition);
@@ -56,6 +62,7 @@ public class Stones : MonoBehaviour
                     }
                     if (Hit.collider.CompareTag("Halkopirit"))
                     {
+                        stoneCount += 1;
                         halkopirit = Instantiate(Halkopirit, TakePosition.transform.position, Quaternion.identity);
                         PlayerPickUpDrop.objectGrabbable = halkopirit.GetComponent<ObjectGrabbable>();
                         PlayerPickUpDrop.objectGrabbable.Grab(TakePosition);
@@ -63,6 +70,7 @@ public class Stones : MonoBehaviour
                     }
                     if (Hit.collider.CompareTag("Marganec"))
                     {
+                        stoneCount += 1;
                         marganec = Instantiate(Marganec, TakePosition.transform.position, Quaternion.identity);
                         PlayerPickUpDrop.objectGrabbable = marganec.GetComponent<ObjectGrabbable>();
                         PlayerPickUpDrop.objectGrabbable.Grab(TakePosition);
@@ -121,6 +129,12 @@ public class Stones : MonoBehaviour
                     
                 }
             }
+        }
+
+        if (stoneCount == 7 && !scrimer)
+        {
+            scull.isScull = true;
+            scrimer = true;
         }
     }
 }

@@ -56,7 +56,7 @@ public class Cart : MonoBehaviour
                         if (PlayerPickUpDrop.WhatHolding == "Халькопирит" || PlayerPickUpDrop.WhatHolding == "Халькопиритт(Clone)") color.SetTexture("_MainTex", Halkopirit);
                         if (PlayerPickUpDrop.WhatHolding == "Марганец" || PlayerPickUpDrop.WhatHolding == "Марганецц(Clone)") color.SetTexture("_MainTex", Marganec);
                         napolnenie.transform.localPosition = new Vector3(napolnenie.transform.localPosition.x, napolnenie.transform.localPosition.y + 0.14f, napolnenie.transform.localPosition.x);
-                        GameObject obj = Ruka.transform.GetChild(0).gameObject;
+                        GameObject obj = Ruka.transform.GetChild(1).gameObject;
                         Destroy(obj);
                         PlayerPickUpDrop.objectGrabbable = null;
                         PlayerPickUpDrop.WhatHolding = "0";

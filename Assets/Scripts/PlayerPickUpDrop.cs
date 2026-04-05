@@ -76,5 +76,7 @@ public class PlayerPickUpDrop : MonoBehaviour
                 WhatHolding = "0";
             }
         }
+
+        
     }
 }
