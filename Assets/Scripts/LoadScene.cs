@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class jnhgfdtrs : MonoBehaviour
 {
-    public void ToMenu()
+
+    private void Start()
     {
         SceneManager.LoadScene("MainMenu");
     }

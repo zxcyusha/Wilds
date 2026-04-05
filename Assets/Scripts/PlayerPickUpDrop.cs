@@ -22,7 +22,6 @@ public class PlayerPickUpDrop : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(WhatHolding);
         if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit Hit, pickUpDistance, pickUpLayerMask))
         {
             Debug.DrawRay(playerCameraTransform.position, playerCameraTransform.forward, Color.red);

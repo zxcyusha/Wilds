@@ -42,7 +42,7 @@ public class ObjectGrabbable : MonoBehaviour
 
     private void aboba() { 
         
-        if (PlayerPickUpDrop.WhatHolding == "лист") {
+        if (PlayerPickUpDrop.WhatHolding == "Sheet") {
             transform.rotation = Quaternion.Euler(0, 0, -90);
             transform.localRotation = Quaternion.Euler(0, 0, -90);
         }

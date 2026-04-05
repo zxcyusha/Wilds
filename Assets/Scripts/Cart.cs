@@ -66,7 +66,7 @@ public class Cart : MonoBehaviour
                     
                 }
 
-                else if (PlayerPickUpDrop.WhatHolding == "лист")
+                else if (PlayerPickUpDrop.WhatHolding == "Sheet")
                 {
                     E.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.E))
