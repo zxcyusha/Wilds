@@ -32,11 +32,11 @@
       "translations": [
         {
           "language": "English",
-          "value": "Press F to open the diary"
+          "value": "Press J to open the diary"
         },
         {
           "language": "Russian",
-          "value": "Нажми на  F, чтобы открыть дневник"
+          "value": "Нажми на  J, чтобы открыть дневник"
         }
       ]
     },
@@ -45,11 +45,11 @@
       "translations": [
         {
           "language": "English",
-          "value": "Click on I to return"
+          "value": "Click on Enter to return"
         },
         {
           "language": "Russian",
-          "value": "Нажми на I чтобы вернуться"
+          "value": "Нажми на Enter чтобы вернуться"
         }
       ]
     },

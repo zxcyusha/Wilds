@@ -101,6 +101,8 @@ public class Stones : MonoBehaviour
                         PlayerPickUpDrop.WhatHolding = "0";
                         PlayerPickUpDrop.objectGrabbable = null;
                         poloshili = true;
+                       
+
                     }
                     if (PlayerPickUpDrop.WhatHolding == "Куприт" || PlayerPickUpDrop.WhatHolding == "Купритт(Clone)")
                     {
@@ -126,7 +128,6 @@ public class Stones : MonoBehaviour
                         PlayerPickUpDrop.objectGrabbable = null;
                         poloshili = true;
                     }
-                    
                 }
             }
         }

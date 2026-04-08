@@ -83,6 +83,14 @@ public class DAYS : MonoBehaviour
     public GameObject diary2;
     public GameObject diary3;
     public GameObject diary4;
+    [SerializeField] private GameObject List1;
+    [SerializeField] private GameObject List2;
+    [SerializeField] private GameObject List3;
+    [SerializeField] private GameObject List4;
+    [SerializeField] private GameObject After1;
+    [SerializeField] private GameObject After2;
+    [SerializeField] private GameObject After3;
+    [SerializeField] private GameObject After4;
     public static int day;
     public bool CAN1;
     public bool CAN2;
@@ -204,6 +212,15 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary1.SetActive(true);
                         RoomWithRart.canDvig = false;
                         RoomWithRart.katitsa = true;
@@ -226,6 +243,14 @@ public class DAYS : MonoBehaviour
                     AreYouShure.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
                         Diary1.SetActive(true);
                         RoomWithRart.canDvig = false;
                         RoomWithRart.katitsa = true;
@@ -248,6 +273,14 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
                         Diary1.SetActive(false);
                         Diary2.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -272,6 +305,15 @@ public class DAYS : MonoBehaviour
                     AreYouShure.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary1.SetActive(false);
                         Diary2.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -297,6 +339,15 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary2.SetActive(false);
                         Diary3.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -321,6 +372,15 @@ public class DAYS : MonoBehaviour
                     AreYouShure.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary2.SetActive(false);
                         Diary3.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -345,6 +405,15 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary3.SetActive(false);
                         Diary4.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -370,6 +439,15 @@ public class DAYS : MonoBehaviour
                     AreYouShure.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary3.SetActive(false);
                         Diary4.SetActive(true);
                         RoomWithRart.katitsa = true;
@@ -395,6 +473,15 @@ public class DAYS : MonoBehaviour
                     F.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary4.SetActive(false);
                         Diary5.SetActive(true);
                         EndGame = true;
@@ -407,6 +494,15 @@ public class DAYS : MonoBehaviour
                     AreYouShure.SetActive(true);
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        List1.SetActive(false);
+                        List2.SetActive(false);
+                        List3.SetActive(false);
+                        List4.SetActive(false);
+                        After1.SetActive(false);
+                        After2.SetActive(false);
+                        After3.SetActive(false);
+                        After4.SetActive(false);
+
                         Diary4.SetActive(false);
                         Diary5.SetActive(true);
                         EndGame = true;
