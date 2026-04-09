@@ -20,8 +20,6 @@ public class DAYS : MonoBehaviour
     public GameObject Den3;
     public GameObject Den4;
     public GameObject Den5;
-    public GameObject Door1;
-    public GameObject Door2;
     public GameObject RaspInstr;
     public Transform playerCamera;
     public AudioSource InstrZvuk;
@@ -633,8 +631,6 @@ public class DAYS : MonoBehaviour
     private void DnevnikClose() {
         if (!EndGame) {
             diary.SetActive(false);
-            Door1.GetComponent<Animator>().SetBool("Open", false);
-            Door2.GetComponent<Animator>().SetBool("open", false);
             Invoke("ZaKrPanel", 3f);
             Cursor.visible = false;
             DenNStart();
@@ -643,8 +639,6 @@ public class DAYS : MonoBehaviour
         }
         else
         {
-            Door1.GetComponent<Animator>().SetBool("Open", false);
-            Door2.GetComponent<Animator>().SetBool("open", false);
             if (Diary.Bad >= 5) {
                 diary.SetActive(false);
                 TemneyushiyEkran.SetActive(false);
@@ -671,8 +665,6 @@ public class DAYS : MonoBehaviour
 
     private void DveriOtkr()
     {
-        Door1.GetComponent<Animator>().SetBool("Open", true);
-        Door2.GetComponent<Animator>().SetBool("open", true);
         LiftOtkr.Play();
         TemneyushiyEkran.SetActive(false);
         Den2.SetActive(false);
@@ -689,7 +681,6 @@ public class DAYS : MonoBehaviour
         else if (DAY3) Den3.SetActive(true);
         else if (DAY4) Den4.SetActive(true);
         else if (DAY5) Den5.SetActive(true);
-        Door1.GetComponent<AudioSource>().Play();
     }
 
     private void ResetFirstRoom()
@@ -769,8 +760,6 @@ public class DAYS : MonoBehaviour
 
     private void GoodKonec()
     {
-        Door1.GetComponent<Animator>().SetBool("Open", true);
-        Door2.GetComponent<Animator>().SetBool("open", true);
         NachZvuk.Stop();
         HappyAudio.Play();
         HappyPanel.SetActive(true);

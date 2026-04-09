@@ -11,15 +11,8 @@ public class StartCatScene : MonoBehaviour
     public TextMeshProUGUI text;
     public float speed = 1f;
     public GameObject zastavka;
-    public Animator door1;
-    public Animator door2;
-    public AudioSource FonShym1;
-    public AudioSource FonShym2;
     public GameObject kamera;
     public GameObject player;
-    public AudioSource pym;
-    public AudioSource tulum;
-    public AudioSource liftOpen;
     public static bool CanSettings = false;
     public GameObject Instrukcia;
     public GameObject Instrukcia1;
@@ -134,21 +127,13 @@ public class StartCatScene : MonoBehaviour
         i = 0;
         text.text = "";
         zastavka.SetActive(true);
-        FonShym1.Stop();
-        tulum.Play();
-        Invoke("a", 3f);
     }
     private void END() {
         IsAnimated = false;
         Translator.SetActive(false);
         zastavka.SetActive(false);
-        door1.SetBool("Open", true);
-        door2.SetBool("open", true);
-        FonShym2.Play();
-        liftOpen.Play();
         Invoke("StartGame", 2f);
     }
-    private void a() { pym.Play(); }
 
     private void StartGame()
     {
